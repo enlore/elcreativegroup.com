@@ -10,7 +10,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p,span {
-    font-family: 'Inconsolata', 'Times New Roman', serif;
+    font-family: Helvetica, sans-serif;
 }
 
 /* teal */
@@ -20,13 +20,23 @@ p,span {
 @fg1: #3A18CE;
 
 /* coffee ice cream */
-@bg1: #bdb4ad;
+@bg1: #D6CEC9;
 
 /* milk chocolate */
 @bg2: #1d140b;
 
 /* cool off white */
-@bg3: #dbd9da;
+@bg3: #FFF7FA;
+
+/* the palette */
+div.swatch-two {
+    padding: 5px;
+}
+.swatch-two.one { background: @hl; span { color: @fg1; }}
+.swatch-two.two { background: @fg1; span { color: @bg3; }}
+.swatch-two.three { background: @bg1; span { color: @bg2; }}
+.swatch-two.four { background: @bg2; span { color: @bg3; }}
+.swatch-two.five { background: @bg3; span { color: @bg2; }}
 
 /* grid */
 div.width.wrapper {
@@ -70,6 +80,14 @@ div .content {
     padding: 2%;
 }
 
+footer {
+    background: @bg2;
+    color: @bg3;
+    overflow: hidden;
+    padding: 12px 18px 12px 18px;
+    width: 100%;
+    p { text-align: center; }
+}
 @media screen and (min-width: 1126px) {
     div.width.wrapper {
         clear: both;
@@ -110,7 +128,7 @@ div .content {
 
     div.demo > .splash {
         background: @hl; 
-        box-shadow: 0px 0px 5px 2px @bg2 inset;
+        box-shadow: 0px 0px 2px 0px @bg2 inset;
         height: 30em;
         padding: 6em 1em 0 1em;
         h1, h2 { 
@@ -178,5 +196,17 @@ div .content {
         h1,h2,h3,h4,h5,h6 {
             margin-bottom: 1em;
         }
+    }
+    
+    footer p {
+        display: inline;
+    }
+
+    footer p:first-child {
+        float: left;
+    }
+
+    footer p:last-child {
+        float: right;
     }
 }
