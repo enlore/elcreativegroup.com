@@ -13,6 +13,18 @@ p,span {
     font-family: Helvetica, sans-serif;
 }
 
+::selection {
+    background: @hl;
+}
+
+::-moz-selection {
+    background: @hl;
+}
+
+em {
+    color: @fg1;
+}
+
 /* teal */
 @hl: #009090;
 
@@ -21,6 +33,7 @@ p,span {
 
 /* coffee ice cream */
 @bg1: #D6CEC9;
+@bg1: #fff;
 
 /* milk chocolate */
 @bg2: #1d140b;
@@ -195,6 +208,11 @@ footer {
         padding: 2em;
         h1,h2,h3,h4,h5,h6 {
             margin-bottom: 1em;
+        }
+        a {
+            border-bottom: 2px solid @fg1;
+            color: @fg1;
+            text-decoration: none;
         }
     }
     
