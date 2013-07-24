@@ -98,18 +98,23 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-row {
+@teal: #00EDED;
+@red: #E50057;
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+}
+div.row {
     clear: both;
     margin: 0 auto;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    overflow: hidden;
     width: 48em;
 }
 
 div[class^="col"] {
     float: left; 
     margin-right: 2.5%;
-    padding: 2em;
+    padding: 1em;
 }
 
 div[class*="-3"] {
@@ -136,16 +141,27 @@ div[class*="-12"] {
     width: 100%;
 }
 
+header {
+    border-bottom: 1px solid #eee;
+}
 
+div.hero {
+    text-align: center;
+}
 
+div.welcome {
+    background: #fff;
+    background: @teal;
+    margin-top: -1em;
+    padding-top: 0;
+    text-align: center;
+}
 
-
-
-
-
-
-
-
+div.call-to-action {
+    background: @red;
+    color: #eee;
+    text-align: center;
+}
 
 /* ==========================================================================
    Helper classes
