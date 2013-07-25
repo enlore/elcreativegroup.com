@@ -104,6 +104,7 @@ h1,h2,h3,h4,h5,h6 {
     margin: 0;
     padding: 0;
 }
+
 div.row {
     clear: both;
     margin: 0 auto;
@@ -113,7 +114,6 @@ div.row {
 
 div[class^="col"] {
     float: left; 
-    margin-right: 2.5%;
     padding: 1em;
 }
 
@@ -125,7 +125,7 @@ div[class*="-4"] {
     width: 33%;
 }
 
-div[class*="=-6"] {
+div[class*="-6"] {
     width: 50%;
 }
 
@@ -142,25 +142,56 @@ div[class*="-12"] {
 }
 
 header {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #666;
 }
 
 div.hero {
     text-align: center;
+    img {
+        margin-bottom: 2em;
+    }
+}
+
+section.welcome {
+    background: @teal;
 }
 
 div.welcome {
-    background: #fff;
-    background: @teal;
-    margin-top: -1em;
+    margin-bottom: 1em;
     padding-top: 0;
     text-align: center;
+    h1 {
+        font-size: 46px;
+    }
+    p {
+        font-size: 28px;
+    }
+}
+
+section.call-to-action {
+    background: @red;
+    margin-bottom: 4em;
 }
 
 div.call-to-action {
-    background: @red;
     color: #eee;
+    height: 160px;
     text-align: center;
+}
+
+div.call-to-action:hover {
+    background: #DD4B81; 
+}
+
+img.portfolio { 
+    margin-top: 2em;
+    max-width: 100%; 
+}
+
+section#portfolio > div.row {
+    border-bottom: 1px solid @red;
+    margin-bottom: 1em;
+    padding: 1em 0 1em 0;
 }
 
 /* ==========================================================================
