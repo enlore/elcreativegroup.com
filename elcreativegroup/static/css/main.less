@@ -92,7 +92,67 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+* { 
+    box-sizing: border-box;
+}
 
+a,p,h1,h2,h3,h4,h5,h6,
+span,section,footer,header,article,
+div,ul,ol,li {
+    margin: 0;
+    padding: 0;
+}
+
+div.container {
+    margin: 0 auto;
+    position: relative;
+    width: 58em;
+}
+
+@nav: #000;
+@nav-active: #444;
+@cta-bg: #00eded;
+
+nav {
+    background: @nav;
+    a {
+        color: #fff; 
+        text-decoration: none;
+        display: block;
+        padding: 1em;
+    }
+    a:hover,
+    a:active {
+        background: @nav-active; 
+    }
+}
+
+section.hero {
+    .face-box { 
+        position: relative; 
+            height: 590px;
+        .face:first-child {
+            background: url('/static/img/face-left.png') no-repeat center center; 
+            border: 1px solid blue;
+            height: 590px;
+            position: absolute;
+            width: 50%;
+        }
+        .face:last-child {
+            background: url('/static/img/face-right.png') no-repeat center center; 
+            border: 1px solid red;
+            height: 590px;
+            position: absolute;
+            right: 0;
+            width: 50%;
+        }
+    }
+}
+
+section.cta {
+    background: @cta-bg;
+    height: 10em;
+}
 
 
 
