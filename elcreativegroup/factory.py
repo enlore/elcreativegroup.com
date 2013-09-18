@@ -3,14 +3,19 @@ from config import Config
 import logging
 from logging.handlers import SMTPHandler, RotatingFileHandler
 from logging import Formatter
+from .frontend.views import frontend
 
 def create_app():
     app = Flask('elcreativegroup')
-    config_app(app)
+    config_app(app, config=None)
     setup_logging(app)
+    bootstrap_blueprints(app)
     return app
 
-def config_app(config):
+def bootstrap_blueprints(app):
+    app.register_blueprint(frontend)
+
+def config_app(app, config):
     if config is not None:
         app.config.from_object(config)
         app.logger.info('config from %s' % config)
@@ -20,7 +25,7 @@ def config_app(config):
 def setup_logging(app):
     if app.config['FILE_LOGGING']:
         # rotate them logs, boy
-        fh = RotatingFileHander(app.config['FILE_LOG'], 
+        fh = RotatingFileHandler(app.config['FILE_LOG'], 
                 maxBytes=10000, backupCount=3 )
         log_format ="""
         =======================================================
@@ -29,9 +34,9 @@ def setup_logging(app):
         """
         fh.setFormatter(Formatter(log_format))
         app.logger.addHandler(fh)
-        app.logger.info('LOGGING TO FILESYSTEM')
+        app.logger.info('LOGGING TO FILESYSTEM @ %s' % app.config['FILE_LOG'])
 
-    if app.config['MAIL_LOGGING']:
+    if app.config['EMAIL_LOGGING']:
         # and the email handler
         serv = '127.0.0.1'
         sender = 'elcreateive@chilidog'
