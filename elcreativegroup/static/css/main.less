@@ -129,19 +129,22 @@ nav {
 
 section.hero {
     .face-box { 
+        border: solid 1px green;
         position: relative; 
-            height: 590px;
+        height: 590px;
+
         .face:first-child {
             background: url('/static/img/face-left.png') no-repeat center center; 
             border: 1px solid blue;
-            height: 590px;
+            height: 100%;
             position: absolute;
             width: 50%;
         }
+
         .face:last-child {
             background: url('/static/img/face-right.png') no-repeat center center; 
             border: 1px solid red;
-            height: 590px;
+            height: 100%;
             position: absolute;
             right: 0;
             width: 50%;
@@ -152,6 +155,11 @@ section.hero {
 section.cta {
     background: @cta-bg;
     height: 10em;
+    h1  { 
+        font-size: 44px;
+        padding-top: 1em;
+        text-align: center;
+    }
 }
 
 
