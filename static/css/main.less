@@ -28,9 +28,23 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .navbar[role="navigation"] {
+    background: #666;
+    font-size: 22px;
     height: 0;
     overflow: hidden;
     transition: height 0.2s ease-out;
+    ul li a {
+        display: block;
+        text-decoration: none;
+        color: #ddd;
+    }
+    ul li {
+        padding: 0.3em;
+        &:hover,
+        &:active {
+            background: #999;
+        }
+    }
 }
 
 .navbar[role="navigation"].active {
@@ -49,6 +63,7 @@ h1,h2,h3,h4,h5,h6 {
 
     .navbar[role="navigation"] {
         height: 100%;
+        width: 18%;
         margin-left: -100%;
         position: fixed;
         top: 0;
@@ -63,11 +78,11 @@ h1,h2,h3,h4,h5,h6 {
     }
 
     .left-panel.active {
-        margin-left: 23%;
+        margin-left: 18%;
     }
 
     .right-panel.active {
-        margin-right: -23%;
+        margin-right: -18%;
         float: right;
     }
 }
@@ -96,6 +111,7 @@ h1,h2,h3,h4,h5,h6 {
 @media screen and (min-width: 767px) {
     .left-panel {
         border-right: 1px solid #888;
+        box-shadow: -2px 0 2px 1px #111;
         width: 26%;
         height: 100%;
         position: fixed;
