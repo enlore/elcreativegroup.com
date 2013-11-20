@@ -1,7 +1,118 @@
-* {
-    box-sizing: border-box;
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body,
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Helvetica', sans-serif !important;
 }
 
-body {
+.navbar { position: fixed; display: none; }
+
+.page-wrap {
+    height: 100%;
+}
+
+.left-panel {
+    float: none;
+    background: #bbb;
+    background-image: url('/img/bg-panel.png');
+    padding: 1em;
+    h2 {
+        color: #ddd;
+    }
+}
+
+.right-panel {
+    background: #ddd;
+    min-height: 100%;
+    float: none;
+}
+
+@media screen and (min-width: 767px) {
+    .left-panel {
+        border-right: 1px solid #888;
+        width: 26%;
+        height: 100%;
+        position: fixed;
+    }
+
+    .right-panel {
+        width: 73%;
+        float: right;
+        height: auto;
+    }
+}
+
+.leader {
+    text-align: center;
+    padding: 1em 0 0 0;
+}
+
+.contact-cta {
     background: #eee;
+    border-radius: 4px;
+    padding: 2em;
+}
+
+@media screen and (min-width: 767px) {
+    .leader {
+        padding: 1em 2em 0 2em;
+    }
+
+    .contact-cta {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+
+.portfolio {
+    h3 {
+        text-align: center;
+        padding: 1em;
+        margin: 0;
+    }
+
+    ul,
+    ul li {
+        margin: 0;
+    }
+}
+
+.case-study-link {
+    display: block;
+    height: 7em;
+    font-size: 18px;
+    span {
+        padding: 0 1em 0 1em;;
+    }
+    &:hover,
+    &:active {
+        background: #ccc !important;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .case-study-link {
+        height: 10em;
+    }
+}
+
+
+.case-study-link.tarboosh-clarksville {
+    background: radial-gradient(circle, rgb(160, 24, 28),
+        rgb(132, 21, 26))
+        no-repeat scroll 0% 0% rgb(132, 21, 26);
+    text-align: right;
+    color: #ddd;
+}
+
+.case-study-link.dj-ahlure {
+    background: #fff;
+}
+
+.case-study-link.qaaw-dating {
+    background: #380048;
+    text-align: right;
+    color: #ccc;
 }
