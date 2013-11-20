@@ -1,4 +1,9 @@
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
 html, body { height: 100%; }
 
 body,
@@ -6,8 +11,10 @@ h1,h2,h3,h4,h5,h6 {
     font-family: 'Helvetica', sans-serif !important;
 }
 
+/* Nav */
 .navbar { position: fixed; display: none; }
 
+/* Layout */
 .page-wrap {
     height: 100%;
 }
@@ -37,12 +44,13 @@ h1,h2,h3,h4,h5,h6 {
     }
 
     .right-panel {
-        width: 73%;
+        width: 74%;
         float: right;
         height: auto;
     }
 }
 
+/* Index */
 .leader {
     text-align: center;
     padding: 1em 0 0 0;
