@@ -28,10 +28,7 @@ app.use(less_middleware(less_opts))
 app.use(express.static(path.join(__dirname, 'static')))
 
 app.get('/', function (req, resp) {
-    resp.render('index', {
-        title       : 'HEY WOAH'
-        , headline  : 'IT IS A SITE'
-    })
+    resp.render('index', {})
 })
 
 exports.start = function (port) {
