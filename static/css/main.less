@@ -11,6 +11,7 @@ h1,h2,h3,h4,h5,h6 {
     font-family: 'Helvetica', sans-serif !important;
 }
 
+
 /* Nav */
 .nav-button {
     background: #444;
@@ -34,6 +35,41 @@ h1,h2,h3,h4,h5,h6 {
 
 .navbar[role="navigation"].active {
     height: 4em;
+}
+
+@media screen and (min-width: 767px) {
+    .left-panel,
+    .right-panel,
+    .navbar[role="navigation"] {
+        transition: margin 0.2s ease-out;
+        -o-transition: margin 0.2s ease-out;
+        -moz-transition: margin 0.2s ease-out;
+        -webkit-transition: margin 0.2s ease-out;
+    }
+
+    .navbar[role="navigation"] {
+        height: 100%;
+        margin-left: -100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-left: 2em;
+        padding-top: 2em;
+    }
+
+    .navbar[role="navigation"].active {
+        margin-left: 0;
+        height: 100%;
+    }
+
+    .left-panel.active {
+        margin-left: 23%;
+    }
+
+    .right-panel.active {
+        margin-right: -23%;
+        float: right;
+    }
 }
 
 /* Layout */
