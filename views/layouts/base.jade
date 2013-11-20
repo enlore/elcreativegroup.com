@@ -1,17 +1,32 @@
 !!!5
 html
-    head
-        title #{title}
-        link(rel="stylesheet", href="/css/main.css")
-        link(rel="stylesheet", href="/css/base.css")
-        link(rel="stylesheet", href="/css/skeleton.css")
+  head
+    title #{title}
+    link(rel="stylesheet", href="/css/main.css")
+    link(rel="stylesheet", href="/css/base.css")
+    link(rel="stylesheet", href="/css/skeleton.css")
 
-        meta(charset="utf-8")
-        meta(name="description", content="")
-        meta(name="author", content="")
-        meta(name="viewport", content="initial-scale=1")
+    meta(charset="utf-8")
+    meta(name="description", content="")
+    meta(name="author", content="")
+    meta(name="viewport", content="initial-scale=1")
 
-        link(rel="shortcut icon", href="/img/favicon.ico")
+    link(rel="shortcut icon", href="/img/favicon.ico")
 
-    body
-        block content
+  body
+    div.page-wrap
+      nav.navbar
+        ul
+          li
+            a(href="#") Home
+          li
+            a(href="#") Our Portfolio
+
+      div.left-panel
+        h2 We are freaking creative
+
+      block content
+
+    script(src="/js/vendor/zepto.js")
+    script(src="/js/main.js")
+
