@@ -31,6 +31,10 @@ app.get('/', function (req, resp) {
     resp.render('index', {})
 })
 
+app.get('/palettes', function (req, resp) {
+    resp.render('palettes')
+})
+
 exports.start = function (port) {
     app.listen(port, function () {
         console.info('** Listening on localhost:%s', port)

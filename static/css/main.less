@@ -1,3 +1,31 @@
+@light-blue: #E9F8E3;
+@med-blue: #8ADAC0;
+@blue-grey: #667572;
+@black: #141414;
+
+@navbar-bg: @blue-grey;
+
+@fg-text: @black;
+@logo-bg: @black;
+@body-bg: @light-blue;
+@contact-cta: @med-blue;
+
+@case-study-link: @blue-grey;
+@case-study-hover: @med-blue;
+
+h1,h2,h3,h4,h5,h6 { color: @fg-text; }
+
+.case-study-link { background: @case-study-link; }
+
+.case-study-link:hover {
+    background: @case-study-hover;
+    color: @fg-text;
+}
+.logo-container { background: @logo-bg; }
+.contact-cta { background: @contact-cta; }
+.right-panel { background: @body-bg; }
+.navbar[role="navigation"] { background: @navbar-bg; }
+
 * {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -28,7 +56,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .navbar[role="navigation"] {
-    background: #666;
     font-size: 22px;
     height: 0;
     overflow: hidden;
@@ -96,7 +123,6 @@ h1,h2,h3,h4,h5,h6 {
     background: #bbb;
     background-image: url('/img/bg-panel.png');
     .logo-container {
-        background: #000;
         padding: 0.3em;
         box-shadow: 1px 3px 2px -1px #111;
         img {
@@ -111,7 +137,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .right-panel {
-    background: #ddd;
     min-height: 100%;
     float: none;
 }
@@ -137,10 +162,13 @@ h1,h2,h3,h4,h5,h6 {
 .leader {
     text-align: center;
     padding: 1em 0 0 0;
+    p {
+        padding: 0 12em 0 12em;
+        margin-bottom: 4em;
+    }
 }
 
 .contact-cta {
-    background: #eee;
     border-radius: 4px;
     padding: 2em;
 }
@@ -179,7 +207,6 @@ h1,h2,h3,h4,h5,h6 {
     }
     &:hover,
     &:active {
-        background: #ccc !important;
     }
 }
 
@@ -191,19 +218,12 @@ h1,h2,h3,h4,h5,h6 {
 
 
 .case-study-link.tarboosh-clarksville {
-    background: radial-gradient(circle, rgb(160, 24, 28),
-        rgb(132, 21, 26))
-        no-repeat scroll 0% 0% rgb(132, 21, 26);
     text-align: right;
-    color: #ddd;
 }
 
 .case-study-link.dj-ahlure {
-    background: #fff;
 }
 
 .case-study-link.qaaw-dating {
-    background: #380048;
     text-align: right;
-    color: #ccc;
 }
