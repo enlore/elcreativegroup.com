@@ -180,7 +180,8 @@ hr {
     }
 }
 
-/* Index */
+/* Layout
+ *********/
 .leader {
     text-align: center;
     padding: 1em 0 0 0;
@@ -189,10 +190,21 @@ hr {
         font-family: "Engravers", "Helvetica", sans-serif;
         letter-spacing: 4px;
     }
+
+    .deck {
+        font-size: 26px;
+        padding: 0.5em 1em 1em 1em;
+    }
+
     p {
         text-align: left;
         padding: 0 2em 0 2em;
-        margin-bottom: 4em;
+    }
+}
+
+.content {
+    p {
+        padding: 0 0.4em 0 0.4em;
     }
 }
 
@@ -265,7 +277,7 @@ hr {
     }
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
     .case-study-link {
         height: 300px;
     }
@@ -273,7 +285,18 @@ hr {
 
 
 .case-study-link.tarboosh-clarksville {
+    background-image: url('/img/link_placeholder_sm.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
     text-align: right;
+}
+
+@media screen and (min-width: 768px){
+    .case-study-link.tarboosh-clarksville {
+        background-image: url('/img/link_placeholder_lg.png');
+        background-position: 0 0;
+        background-repeat: no-repeat;
+    }
 }
 
 .case-study-link.dj-ahlure {
