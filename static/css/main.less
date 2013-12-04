@@ -3,7 +3,8 @@
 @light-blue: #E9F8E3;
 @med-blue: #8ADAC0;
 @blue-grey: #667572;
-@black: #141414;
+@black: #140000;
+@blue-black: #141414;
 //@dusty-red: #BE4E66;
 @rich-red: #AD1616;
 
@@ -13,7 +14,7 @@
 @navbar-a-hover: @blue-grey;
 
 @fg-text: @black;
-@logo-bg: @black;
+@logo-bg: @blue-black;
 @body-bg: @white;
 @contact-cta: @rich-red;
 
@@ -123,6 +124,7 @@ body {
     float: none;
     background: #bbb;
     background-image: url('/img/bg-panel.png');
+    padding-bottom: 1em;
     .logo-container {
         background: @logo-bg;
         padding: 0.3em;
@@ -134,7 +136,7 @@ body {
         }
     }
     .nav-button {
-        margin: 2em auto;
+        margin: 1em auto 0 auto;
     }
 }
 
@@ -146,16 +148,20 @@ body {
 
 @media screen and (min-width: 767px) {
     .left-panel {
-        border-right: 1px solid #fff;
+        border-right: 1px solid #B7ACAC;
         box-shadow: -2px 0 2px 1px #111,
-            inset -2px 0 0 0px #444;
+            inset -2px 0 0 0px #190707;
         width: 26%;
         height: 100%;
+        padding: 0;
         position: fixed;
         margin-left: 0%;
         .logo-container {
             margin-right: 6px;
             margin-left: 6px;
+        }
+        .nav-button {
+            margin: 2em auto; 
         }
     }
 
@@ -186,12 +192,18 @@ body {
 @media screen and (min-width: 767px) {
     .leader {
         padding: 1em 2em 0 2em;
+        p {
+            padding: 0 8em;
+        }
     }
 
     .contact-cta {
         width: 50%;
         margin: 0 auto;
         border-radius: 4px;
+        border: 1px solid lighten(@contact-cta, 15%);
+        border-right: 1px solid darken(@contact-cta, 15%);
+        border-bottom: 3px solid darken(@contact-cta, 15%);
     }
 }
 
