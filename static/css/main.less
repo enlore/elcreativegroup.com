@@ -21,6 +21,11 @@
 @case-study-link: @blue-grey;
 @case-study-hover: @light-blue;
 
+@font-face {
+    src: url('/font/engravers-gothic-bt.ttf');
+    font-family: "Engravers";
+}
+
 h1,h2,h3,h4,h5,h6 { color: @fg-text; }
 
 * {
@@ -35,6 +40,9 @@ body {
     font-family: 'Helvetica', sans-serif !important;
 }
 
+hr {
+    border-color: #888;
+}
 
 /* Nav */
 .nav-button {
@@ -176,6 +184,10 @@ body {
 .leader {
     text-align: center;
     padding: 1em 0 0 0;
+    h1 {
+        font-weight: bold;
+        font-family: "Engravers", "Helvetica", sans-serif;
+    }
     p {
         text-align: left;
         padding: 0 2em 0 2em;
@@ -185,6 +197,7 @@ body {
 
 .contact-cta {
     background: @contact-cta;
+    border-bottom: 3px solid darken(@contact-cta, 15%);
     padding: 2em;
 }
 
@@ -198,12 +211,18 @@ body {
     }
 
     .contact-cta {
-        width: 50%;
+        width: 70%;
         margin: 0 auto;
         border-radius: 4px;
         border: 1px solid lighten(@contact-cta, 15%);
         border-right: 1px solid darken(@contact-cta, 15%);
         border-bottom: 3px solid darken(@contact-cta, 15%);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .contact-cta {
+        width: 75%;
     }
 }
 
