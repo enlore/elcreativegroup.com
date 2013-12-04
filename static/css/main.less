@@ -1,30 +1,26 @@
+@import 'reset.less';
+@white: #FDFBEC;
 @light-blue: #E9F8E3;
 @med-blue: #8ADAC0;
 @blue-grey: #667572;
 @black: #141414;
+//@dusty-red: #BE4E66;
+@rich-red: #AD1616;
 
 @navbar-bg: @blue-grey;
+@navbar-button: @rich-red;
+@navbar-hover: @light-blue;
+@navbar-a-hover: @blue-grey;
 
 @fg-text: @black;
 @logo-bg: @black;
-@body-bg: @light-blue;
-@contact-cta: @med-blue;
+@body-bg: @white;
+@contact-cta: @rich-red;
 
 @case-study-link: @blue-grey;
-@case-study-hover: @med-blue;
+@case-study-hover: @light-blue;
 
 h1,h2,h3,h4,h5,h6 { color: @fg-text; }
-
-.case-study-link { background: @case-study-link; }
-
-.case-study-link:hover {
-    background: @case-study-hover;
-    color: @fg-text;
-}
-.logo-container { background: @logo-bg; }
-.contact-cta { background: @contact-cta; }
-.right-panel { background: @body-bg; }
-.navbar[role="navigation"] { background: @navbar-bg; }
 
 * {
     box-sizing: border-box;
@@ -34,28 +30,30 @@ h1,h2,h3,h4,h5,h6 { color: @fg-text; }
 
 html, body { height: 100%; }
 
-body,
-h1,h2,h3,h4,h5,h6 {
+body {
     font-family: 'Helvetica', sans-serif !important;
 }
 
 
 /* Nav */
 .nav-button {
-    background: #444;
-    color: #999;
+    background: @navbar-button;
+    border-bottom: 2px solid darken(@navbar-button, 15%);
+    color: darken(@navbar-button, 20%);
     padding: 0.8em;
-    display: inline-block;
+    width: 6em;
     border-radius: 3px;
-    border-bottom: 2px solid #555;
+    text-align: center;
     &:active {
-        background: #555;
-        box-shadow: inset 0 0 4px 1px #333;
+        background: darken(@navbar-button, 25%);
+        box-shadow: inset 0 0 4px 1px darken(@navbar-button, 40%);
         border-bottom: none;
+        color: @navbar-button;
     }
 }
 
 .navbar[role="navigation"] {
+    background: @navbar-bg;
     font-size: 22px;
     height: 0;
     overflow: hidden;
@@ -69,7 +67,10 @@ h1,h2,h3,h4,h5,h6 {
         padding: 0.3em;
         &:hover,
         &:active {
-            background: #999;
+            a {
+                color: @navbar-a-hover;
+            }
+            background: @navbar-hover;
         }
     }
 }
@@ -123,8 +124,9 @@ h1,h2,h3,h4,h5,h6 {
     background: #bbb;
     background-image: url('/img/bg-panel.png');
     .logo-container {
+        background: @logo-bg;
         padding: 0.3em;
-        box-shadow: 1px 3px 2px -1px #111;
+        box-shadow: 1px 11px 2px -7px #111;
         img {
             display: block;
             margin: 0 auto;
@@ -132,23 +134,29 @@ h1,h2,h3,h4,h5,h6 {
         }
     }
     .nav-button {
-        margin: 0 auto;
+        margin: 2em auto;
     }
 }
 
 .right-panel {
+    background: @body-bg;
     min-height: 100%;
     float: none;
 }
 
 @media screen and (min-width: 767px) {
     .left-panel {
-        border-right: 1px solid #888;
-        box-shadow: -2px 0 2px 1px #111;
+        border-right: 1px solid #fff;
+        box-shadow: -2px 0 2px 1px #111,
+            inset -2px 0 0 0px #444;
         width: 26%;
         height: 100%;
         position: fixed;
         margin-left: 0%;
+        .logo-container {
+            margin-right: 6px;
+            margin-left: 6px;
+        }
     }
 
     .right-panel {
@@ -163,15 +171,17 @@ h1,h2,h3,h4,h5,h6 {
     text-align: center;
     padding: 1em 0 0 0;
     p {
-        padding: 0 12em 0 12em;
+        text-align: left;
+        padding: 0 2em 0 2em;
         margin-bottom: 4em;
     }
 }
 
 .contact-cta {
-    border-radius: 4px;
+    background: @contact-cta;
     padding: 2em;
 }
+
 
 @media screen and (min-width: 767px) {
     .leader {
@@ -181,12 +191,12 @@ h1,h2,h3,h4,h5,h6 {
     .contact-cta {
         width: 50%;
         margin: 0 auto;
+        border-radius: 4px;
     }
 }
 
-
 .portfolio {
-    h3 {
+    h2 {
         text-align: center;
         padding: 1em;
         margin: 0;
@@ -198,7 +208,18 @@ h1,h2,h3,h4,h5,h6 {
     }
 }
 
+@media screen and (min-width: 768px) {
+    .portfolio {
+        h2 {
+            text-align: center;
+            padding: 2em;
+            margin: 0;
+        }
+    }
+}
+
 .case-study-link {
+    background: @case-study-link;
     display: block;
     height: 126px;
     font-size: 18px;
@@ -207,6 +228,8 @@ h1,h2,h3,h4,h5,h6 {
     }
     &:hover,
     &:active {
+        background: @case-study-hover;
+        color: @fg-text;
     }
 }
 
