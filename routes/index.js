@@ -5,3 +5,7 @@ exports.index = function (res, resp) {
 exports.tarboosh = function (res, resp) {
     resp.render('tarboosh-clarksville')
 }
+
+exports.ahlure = function (res, resp) {
+    resp.render('ahlure')
+}
