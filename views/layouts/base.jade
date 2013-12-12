@@ -1,21 +1,23 @@
 !!!5
 html
   head
-    title #{title}
-    link(rel="stylesheet", href="/css/main.css")
-    link(rel="stylesheet", href="/css/skeleton.css")
+    title Web Design - Marketing - E|L Creative Group
+    //link(rel="stylesheet", href="/css/main.css")
 
     meta(charset="utf-8")
     meta(name="description", content="")
     meta(name="author", content="")
     meta(name="viewport", content="initial-scale=1")
 
+    link(rel="stylesheet",
+      href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/css/main.css")
+
     link(rel="shortcut icon", href="/img/favicon.ico")
-    script(src="/js/vendor/modernizr.custom.70416.js")
 
   body
     div.page-wrap
-      nav#navbar.navbar(role="navigation")
+      nav#navbar.nav-bar(role="navigation")
         ul
           li
             a(href="/") Home
@@ -24,11 +26,12 @@ html
 
       div#left-panel.left-panel
         header.logo-container
-          img(src="/img/el_header_logo.png")
+          a(href="/"): img(src="/img/el_header_logo.png")
         #nav-button.nav-button Menu
 
       block content
 
-    script(src="/js/vendor/zepto.js")
+    script(src="//code.jquery.com/jquery-1.10.2.min.js")
+    script(src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js")
     script(src="/js/main.js")
 

@@ -1,25 +1,20 @@
 extends layouts/base
 block content
-  #right-panel.right-panel.case-study.tarboosh
-    .content
-      .leader.row
-        .col-12
-          h1 Check out the work we did for Tarboosh Clarksville
-          hr
-        .row
-          .col-6
-            p.deck
-              | We created an online presence for Tarboosh, a mediterranean
-              | eatery and hookah bar in downtown Clarksville, bringing them to
-              | the web for the first time.
+  #right-panel.right-panel
+    .tarboosh.container
+      .head
+        h1 Tarboosh Clarksville
+        hr
 
-          .col-6
-            img.img-responsive.float-right(src="http://placehold.it/400x300")
+    .tarboosh.banner
+    p.tarboosh.caption
+      | Check out the work we did for Tarboosh Mediterranean Cuisine, a
+      | local restaurant and hookah bar.
 
 
-
+    .tarboosh.container
       .row
-        .col-7
+        .col-md-7
           h2 An Online Menu
           p
             | We were tasked with creating an easily navigable
@@ -27,28 +22,29 @@ block content
             | friend and professional photographer, Lester Black, to shoot up the
             | food.
 
-        .col-5
+        .col-md-5
           img.img-responsive.float-right(src="/img/menu_page_600.png")
 
 
       .row
-        .col-7.push-5
+        .col-md-7.col-md-push-5
           h2 Custom Photography
           p
             | We collaborated with the restaurant's owner, Fatah Hantouli,
             | to deside on a look and feel for the site that represents the
             | atmosphere at his restaurant.
 
-        .col-5.pull-7
+        .col-md-5.col-md-pull-7
           img.img-responsive.float-left(src="/img/more_arranging.png")
 
       .row
-        .col-7
+        .col-md-12
           h2 Responsive
           p
             | Of course, with mobile traffic eclippsing desktop, the site had
             | to be responsive so busy business people and college kids could
             | order lunch on the go with their phones.
 
-        .col-5
-          img.case-study.img-responsive(src="/img/home_page_960.png")
+      .row
+        .col-md-12
+          img.except.center.img-responsive(src="/img/home_page_responsive_960.png")
