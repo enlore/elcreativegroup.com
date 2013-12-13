@@ -276,9 +276,32 @@ p {
 }
 
 @media screen and (min-width: @tablet) {
-    .case-study-link {
-        height: 300px;
+    .case-study-links {
+        .case-study-link {
+            height: 300px;
+            text-decoration: none;
+            span {
+                font-size: 36px;
+                text-align: center;
+                display: block;
+                line-height: 300px;
+                font-family: Engravers;
+                color: @contact-cta;
+                letter-spacing: 6px;
+            }
+        }
+
+        .tarboosh {
+            background: @white;
+            &:hover {
+                background: url('/img/tarboosh-link-banner-lg.png');
+                span {
+                    color: @white;
+                }
+            }
+        }
     }
+
 }
 
 /* Tarboosh
