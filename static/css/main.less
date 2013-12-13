@@ -1,6 +1,9 @@
+// 768
+// 992
+// 1200
 @tablet: 768px;
 @sm-screen: 992px;
-@screen: 1040px;
+@screen: 1200px;
 
 @white: #FDFBF3;
 @light-blue: #E9F8E3;
@@ -216,14 +219,16 @@ p {
 
     .deck { font-size: 28px; }
 
+    p { margin-top: 40px; }
+
     .contact-cta {
-        background: @contact-cta;
-        border-bottom: 3px solid darken(@contact-cta, 15%);
-        border-radius: 4px;
         width: 100%;
         padding: 1em;
-        color: lighten(@contact-cta, 60%);
-        margin-top: 2em;
+        padding-bottom: 2em;
+        color: darken(@contact-cta, 30%);
+        margin-top: 1em;
+        text-align: center;
+        h2 {font-size: 28px;}
     }
 
     .lead { font-size: 28px; }
@@ -236,13 +241,18 @@ p {
 
         .contact-cta {
             margin: 3em auto 0;
-            border: 1px solid lighten(@contact-cta, 15%);
-            border-right: 1px solid darken(@contact-cta, 15%);
-            border-bottom: 3px solid darken(@contact-cta, 15%);
+            h2 { font-size: 34px; }
         }
     }
 }
 
+@media screen and (min-width: @screen) {
+    .index.container {
+        .contact-cta {
+            h2 { font-size: 40px; }
+        }
+    }
+}
 /* Portfolio Links
  *************************************/
 .case-study-links {
