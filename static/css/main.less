@@ -1,15 +1,11 @@
-
 @tablet: 768px;
 @sm-screen: 992px;
-@gutter: 16px;
+@screen: 1040px;
 
-@white: #FDFBEC;
+@white: #FDFBF3;
 @light-blue: #E9F8E3;
-@med-blue: #8ADAC0;
 @blue-grey: #667572;
-@black: #140000;
 @blue-black: #141414;
-//@dusty-red: #BE4E66;
 @rich-red: #AD1616;
 
 @navbar-bg: @blue-grey;
@@ -17,30 +13,53 @@
 @navbar-hover: @light-blue;
 @navbar-a-hover: @blue-grey;
 
-@fg-text: @black;
+@cs-img-border: @blue-black;
+@cs-img-shadow: @blue-black;
+
 @logo-bg: @blue-black;
 @body-bg: @white;
 @contact-cta: @rich-red;
 
-@case-study-link: @blue-grey;
-@case-study-hover: @light-blue;
-
 @import 'util.less';
+
+@font-face {
+    src: url('/font/engravers-gothic-bt.ttf');
+    font-family: "Engravers";
+    font-weight: 400;
+}
+
+@font-face {
+    src: url('/font/chaparral-pro.otf');
+    font-family: 'ChaparralPro';
+}
 
 h1,h2,h3,h4,h5,h6 {
     margin: 30px 0 30px;
+    font-family: Engravers, Helvetica, sans-serif;
 }
 
+h1, .h1 { font-size: 46px; }
+h2, .h2 { font-size: 40px; }
+h3, .h3 { font-size: 34px; }
+h4, .h4 { font-size: 28px; }
+h5, .h5 { font-size: 22px; }
+h6, .h6 { font-size: 16px; }
+
+p {
+    font-family: ChaparralPro, 'Times New Roman', serif;
+    font-size: 20px;
+}
 
 /* Nav */
 .nav-button {
     background: @navbar-button;
     border-bottom: 2px solid darken(@navbar-button, 15%);
-    color: darken(@navbar-button, 20%);
-    padding: 0.8em;
-    width: 6em;
+    color: lighten(@contact-cta, 60%);
     border-radius: 3px;
     text-align: center;
+    font-size: 28px;
+    font-family: Engravers, Helvetica, sans-serif;
+    font-weight: bold;
     &:active {
         background: darken(@navbar-button, 25%);
         box-shadow: inset 0 0 4px 1px darken(@navbar-button, 40%);
@@ -139,7 +158,9 @@ h1,h2,h3,h4,h5,h6 {
         }
     }
     .nav-button {
-        margin: 1em auto 0 auto;
+        margin: 15px 0 0 15px;
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -164,7 +185,6 @@ h1,h2,h3,h4,h5,h6 {
             margin-left: 6px;
         }
         .nav-button {
-            margin: 2em auto;
         }
     }
 
@@ -195,7 +215,7 @@ h1,h2,h3,h4,h5,h6 {
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: @tablet) {
     .index.container {
         .head {
             margin-top: 5em;
@@ -240,25 +260,37 @@ h1,h2,h3,h4,h5,h6 {
 /* Tarboosh
  *************************************/
 .tarboosh.container {
-    width: 100%;
-    //.banner { background: url('/img/tarboosh-storefront.png'); }
+    width: 80%;
     padding-bottom: 2em;
     img {
-        border: 1px solid @black;
-        box-shadow: 0 4px 4px -2px @black;
+        border-top: 1px solid @cs-img-border;
+        border-bottom: 1px solid @cs-img-border;
+        box-shadow: 0 4px 4px -2px @cs-img-shadow;
     }
     img.except {
         border: none;
         box-shadow: none;
     }
+    p {
+        font-size: 20px;
+    }
+    .foot {
+        text-align: center;
+    }
 }
 .tarboosh.banner {
-    background: url('http://placehold.it/960x200') center;
-    height: 200px;
+    background: url('/img/banner.png') center no-repeat;
+    background-size: cover;
+    height: 296px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
 }
 .tarboosh.caption {
     font-size: 24px;
     text-align: center;
     margin-top: 1em;
     margin-bottom: 2em;
+}
+
+@media screen and (min-width: 768px) {
 }
