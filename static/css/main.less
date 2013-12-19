@@ -179,6 +179,21 @@ p {
     .nav-button {
         margin: 15px 0 0 15px;
     }
+    .sidebar {
+        display: none;
+        background: @white;
+        margin: 0 auto;
+        width: 90%;
+        border-radius: 4px;
+        padding: 1em;
+        margin-top: 2em;
+        h1 {
+            font-size: 22px;
+        }
+        p.lead {
+            font-size: 18px;
+        }
+    }
 }
 
 .right-panel {
@@ -200,6 +215,9 @@ p {
         .logo-container {
             margin-right: 6px;
             margin-left: 6px;
+        }
+        .sidebar {
+            display: block;
         }
     }
 
@@ -271,8 +289,28 @@ p {
         width: 100%;
         height: 160px;
         background: #eee;
+        text-decoration: none;
         &:hover {
             background: #ddd;
+        }
+        span {
+            text-align: center;
+            display: block;
+            font-family: Engravers;
+            font-size: 18px;
+            color: @contact-cta;
+            letter-spacing: 6px;
+            line-height: 160px;
+        }
+    }
+    .tarboosh {
+        background-image: url('/img/tarboosh-link-banner-lg.png') -10000px -10000px;
+        background-color: @white;
+        &:hover {
+            background-image: url('/img/tarboosh-link-banner-lg.png');
+            span {
+                color: @white;
+            }
         }
     }
 }
@@ -281,27 +319,12 @@ p {
     .case-study-links {
         .case-study-link {
             height: 300px;
-            text-decoration: none;
             span {
-                font-size: 36px;
-                text-align: center;
-                display: block;
                 line-height: 300px;
-                font-family: Engravers;
-                color: @contact-cta;
-                letter-spacing: 6px;
+                font-size: 36px;
             }
         }
 
-        .tarboosh {
-            background: @white;
-            &:hover {
-                background: url('/img/tarboosh-link-banner-lg.png');
-                span {
-                    color: @white;
-                }
-            }
-        }
     }
 
 }
