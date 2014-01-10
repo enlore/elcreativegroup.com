@@ -291,6 +291,7 @@ p {
         height: 160px;
         background: #eee;
         text-decoration: none;
+        &:active,
         &:hover {
             background: #ddd;
         }
@@ -305,22 +306,74 @@ p {
         }
     }
     .tarboosh {
-        background-image: url('/img/tarboosh-link-banner-lg.png') -10000px -10000px;
+        background-image: url('/img/tarboosh-link-banner-sm.png') -10000px -10000px;
         background-color: @white;
+        &:active,
         &:hover {
-            background-image: url('/img/tarboosh-link-banner-lg.png');
+            background-image: url('/img/tarboosh-link-banner-sm.png');
             span {
                 color: @white;
             }
         }
     }
-    .dj-ahlure {
-        background-image: url('/img/ahlure-link-banner-lg.png') -100000px -100000px;
+    .cafe-de-light {
+        background-image: url('/img/cafedelight-link-banner-sm.png') -100000px -100000px;
         background-color: @white;
+        &:active,
         &:hover {
-            background-image: url('/img/ahlure-link-banner-lg.png');
+            background-image: url('/img/cafedelight-link-banner-sm.png');
             span {
                 color: @white; 
+            }
+        }
+    }
+    .dj-ahlure {
+        background-image: url('/img/ahlure-link-banner-sm.png') -100000px -100000px;
+        background-color: @white;
+        &:active,
+        &:hover {
+            background-image: url('/img/ahlure-link-banner-sm.png');
+            span {
+                color: @white; 
+            }
+        }
+    }
+}
+
+@media screen and (min-width: @tablet) {
+    .case-study-links {
+        .cafe-de-light {
+            background-image: url('/img/cafedelight-link-banner-lg.png') -10000px -10000px;
+            background-color: @white;
+            &:active,
+            &:hover {
+                background-image: url('/img/cafedelight-link-banner-lg.png');
+                span {
+                    color: @white;
+                }
+            }
+        
+        } 
+        .tarboosh {
+            background-image: url('/img/tarboosh-link-banner-lg.png') -10000px -10000px;
+            background-color: @white;
+            &:active,
+            &:hover {
+                background-image: url('/img/tarboosh-link-banner-lg.png');
+                span {
+                    color: @white;
+                }
+            }
+        }
+        .dj-ahlure {
+            background-image: url('/img/ahlure-link-banner-lg.png') -100000px -100000px;
+            background-color: @white;
+            &:active,
+            &:hover {
+                background-image: url('/img/ahlure-link-banner-lg.png');
+                span {
+                    color: @white;
+                }
             }
         }
     }
