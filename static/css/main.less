@@ -91,6 +91,7 @@ p {
 
 .nav-bar[role="navigation"] {
     background: @navbar-bg;
+    background: url('/img/abstract.jpg') 0 0 no-repeat;
     font-size: 22px;
     height: 0;
     overflow: hidden;
@@ -166,7 +167,7 @@ p {
 .left-panel {
     float: none;
     background: #bbb;
-    background-image: url('/img/bg-panel.png');
+    background: url('/img/arch.jpg') 0px 0px no-repeat;
     padding-bottom: 1em;
     .logo-container {
         background: @logo-bg;
@@ -235,6 +236,10 @@ p {
 
 /* Index
  *************************************/
+.bg-wrappa {
+    background: url('/img/landscape.jpg') 0 0px no-repeat; 
+}
+
 .index.container {
     width: 80%;
     .head {
@@ -256,7 +261,13 @@ p {
         h2 {font-size: 28px;}
     }
 
-    .lead { font-size: 28px; }
+}
+
+.index {
+    .lead { 
+        font-size: 28px;
+        padding-top: 20px;
+    }
 }
 
 @media screen and (min-width: @tablet) {
