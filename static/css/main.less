@@ -28,6 +28,8 @@
 @body-bg: @white;
 @contact-cta: @rich-red;
 
+@hex-bg: @rich-red;
+
 @import 'util.less';
 
 @font-face {
@@ -509,6 +511,11 @@ p {
     zoom: 1;
 }
 
+.hex-box.red {
+    background: @hex-bg;
+}
+
+
 .hex-1, .hex-2 {
     width: 100%;
     height: 100%;
@@ -536,7 +543,6 @@ p {
     -webkit-transform: rotate(60deg);
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    //background: rgba(32, 242, 124, 0.8);
     &:before {
         transform: rotate(-60deg) translate(0px, 0px);
         -webkit-transform: rotate(-60deg) translate(48px, -28px);
@@ -549,7 +555,6 @@ p {
     -webkit-transform: rotate(-60deg);
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    //background: rgba(123, 142, 44, 0.8);
     &:before {
         transform: rotate(60deg) translate(-100px, 0px); 
         -webkit-transform: rotate(60deg) translate(-48px, -28px);
