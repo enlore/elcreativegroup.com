@@ -1,8 +1,7 @@
 // 768
 // 992
 // 1200
-@tablet: 768px;
-@sm-screen: 992px;
+@tablet: 768px; @sm-screen: 992px;
 @screen: 1200px;
 
 @white: #FDFBF3;
@@ -453,6 +452,7 @@ p {
     border-top: 1px solid white;
     border-bottom: 1px solid white;
 }
+
 .tarboosh.caption {
     font-size: 24px;
     text-align: center;
@@ -460,10 +460,64 @@ p {
     margin-bottom: 2em;
 }
 
+/* Cafe de Light
+ *************************************/
+.cafedelight.container {
+    width: 80%;
+    padding-bottom: 2em;
+    img {
+        border-top: 1px solid @cs-img-border;
+        border-bottom: 1px solid @cs-img-border;
+        box-shadow: 0 4px 4px -2px @cs-img-shadow;
+    }
+    img.except {
+        border: none;
+        box-shadow: none;
+    }
+    p {
+        font-size: 20px;
+    }
+    .foot {
+        text-align: center;
+    }
+}
+
+.cafedelight.banner {
+    background: url('/img/cdl-banner.png') center no-repeat;
+    background-size: cover;
+    height: 296px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.cafedelight.caption {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    padding: 0 10px 0 10px;
+}
+
+
+/* Hex grid for portfolio links 
+***************************************/
+.portfolio-hexes {
+    margin: 7em auto 3em;
+    margin-left: -120px;
+    z-index: -1;
+    width: 1550px;
+}
+
 .hexes {
     clear: both;
     margin-top: 72px;
-    width: 140%;
+    margin-left: 54px;
+    width: 1550px;
+
+    &:nth-child(2n) {
+        margin-left: -54px; 
+    }
+
     span {
         position: relative;
         width: 100%;
@@ -480,23 +534,20 @@ p {
 
     .dj-ahlure {
         background-image: url('/img/ahlure-link-banner-lg.png');
+        background-position: 50% 50%;
     }
 
     .cafe-de-light {
-        //background-image: url('/img/cafedelight-link-banner-lg.png');
         background-image: url('http://placehold.it/400x400');
+    }
+    
+    .elcg {
+        background-image: url('/img/elcg.png'); 
     }
 }
 
 .hexes.alt {
-    margin-left: -121px;
-
-}
-
-.portfolio-hexes {
-    margin: 7em auto 3em;
-    width: 104%;
-    z-index: -1;
+    //margin: -121px auto 0;
 }
 
 .hex-box {
@@ -540,11 +591,14 @@ p {
 
 .hex-1 {
     transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
     -webkit-transform: rotate(60deg);
+
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     &:before {
-        transform: rotate(-60deg) translate(0px, 0px);
+        transform: rotate(-60deg) translate(48px, -28px);
+        -moz-transform: rotate(-60deg) translate(48px, -28px);
         -webkit-transform: rotate(-60deg) translate(48px, -28px);
         transform-origin: 0 0;
     }
@@ -552,12 +606,14 @@ p {
 
 .hex-2 {
     transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
     -webkit-transform: rotate(-60deg);
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     &:before {
-        transform: rotate(60deg) translate(-100px, 0px); 
-        -webkit-transform: rotate(60deg) translate(-48px, -28px);
+        transform: rotate(60deg) translate(-47px, -28px); 
+        -moz-transform: rotate(60deg) translate(-47px, -28px); 
+        -webkit-transform: rotate(60deg) translate(-47px, -28px);
         bottom: 0;
     }
 }

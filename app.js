@@ -31,6 +31,7 @@ app.use(express.static(path.join(__dirname, 'static')))
 app.get('/', routes.index)
 app.get('/tarboosh', routes.tarboosh)
 app.get('/ahlure', routes.ahlure)
+app.get('/cafedelight', routes.cafedelight)
 
 app.get('/palettes', function (req, resp) {
     resp.render('palettes')
