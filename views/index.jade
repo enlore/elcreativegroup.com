@@ -2,28 +2,27 @@ extends layouts/base
 block content
   div#right-panel.right-panel.index
     .bg-wrappa
-      .index.container
-        div.head
-          h1 CREATED WITH YOU IN MIND
-          hr
+      .index.content.container
+        h1.text-center CREATED WITH YOU IN MIND
+        hr
 
-        p.deck
-          | Welcome! We are Elliott &amp; Lorenson, genie and wizard,
-          | respectively. We are mythical creatures, but we're
-          | also very approachable.  Talk to us!
+        p.deck.
+          Welcome! We are Elliott &amp; Lorenson, genie and wizard,
+          respectively. We are mythical creatures, but we're
+          also very approachable.  Talk to us!
 
-        p
-          | Working together as a designer and a developer, we are a skilled
-          | and experienced design agency specializing in branding, beauty,
-          | and skilled marketing.
+        p.
+          Working together as a designer and a developer, we are a skilled
+          and experienced design agency specializing in branding, beauty,
+          and skilled marketing.
 
-        p
-          | If you are starting a business and need help defining your voice
-          | or have been around the block but need help retargeting or
-          | freshening up your brand, take a look at our portfolio and give
-          | us a call.
+        p.
+          If you are starting a business and need help defining your voice
+          or have been around the block but need help retargeting or
+          freshening up your brand, take a look at our portfolio and give
+          us a call.
 
-    p#portfolio.lead.align-center Take a look at our work.  We feel it speaks for itself.
+    h2#portfolio.lead.align-center Take a look at our work.  We feel it speaks for itself.
 
     .portfolio-hexes
       .hexes.row.alt
@@ -37,18 +36,18 @@ block content
           .hex-1
           .hex-2
 
+        a(href="/ahlure").hex-box.dj-ahlure
+          .hex-1
+          .hex-2
+          span DJ Ahlure
+
         a(href="/tarboosh").tarboosh.hex-box
           .hex-1
           .hex-2
           span Tarboosh Clarksville
 
-        a(href="#").dj-ahlure.hex-box
-          .hex-1
-          .hex-2
-          span DJ Ahlure
-
         a(href="#").hex-box.red
-          span DJ Ahlure
+          span Cafe de Light
           .hex-1
           .hex-2
 
@@ -58,12 +57,12 @@ block content
           .hex-1
           .hex-2
 
-        a(href="#").hex-box
-          span Cafe de Light
+        a(href="/cafedelight").hex-box.cafedelight
           .hex-1
           .hex-2
+          span Cafe de Light
 
-        a(href="#").hex-box
+        a(href="#").hex-box.elcg
           span Cafe de Light
           .hex-1
           .hex-2
@@ -75,6 +74,11 @@ block content
 
         a(href="#").hex-box.red
           span Cafe de Light
+          .hex-1
+          .hex-2
+
+        a(href="#").hex-box.red
+          span DJ Ahlure
           .hex-1
           .hex-2
 
@@ -105,7 +109,7 @@ block content
           .hex-2
 
 
-    .index.container
+    .index.content.container
       div.contact-cta
         h2 You should call us.
         h2 (931) 334 1009
