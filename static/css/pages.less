@@ -1,0 +1,116 @@
+/* Index
+ *************************************/
+.content.container {
+    width: 80%;
+    p { margin-top: 40px; }
+}
+
+@media screen and (min-width: @tablet) {
+    .content.container {
+        width: 70%; 
+    }
+}
+
+.index.content {
+    .deck { font-size: 28px; }
+
+    .contact-cta {
+        width: 100%;
+        padding: 1em;
+        padding-bottom: 2em;
+        color: darken(@contact-cta, 30%);
+        margin-top: 1em;
+        text-align: center;
+        clear: both;
+        h2 { font-size: 28px; }
+    }
+
+}
+
+@media screen and (min-width: @tablet) {
+    .index.container {
+        .contact-cta {
+            margin: 3em auto 0;
+            h2 { font-size: 34px; }
+        }
+    }
+}
+
+@media screen and (min-width: @screen) {
+    .index.container .contact-cta h2 { font-size: 40px; }
+}
+
+/* Tarboosh
+ *************************************/
+.tarboosh.container {
+    width: 80%;
+    padding-bottom: 2em;
+    img {
+        border-top: 1px solid @cs-img-border;
+        border-bottom: 1px solid @cs-img-border;
+        box-shadow: 0 4px 4px -2px @cs-img-shadow;
+    }
+    img.except {
+        border: none;
+        box-shadow: none;
+    }
+    p {
+        font-size: 20px;
+    }
+    .foot {
+        text-align: center;
+    }
+}
+
+.tarboosh.banner {
+    background: url('/img/banner.png') center no-repeat;
+    background-size: cover;
+    height: 296px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.tarboosh.caption {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+/* Cafe de Light
+ *************************************/
+.cafedelight.container {
+    width: 80%;
+    padding-bottom: 2em;
+    img {
+        border-top: 1px solid @cs-img-border;
+        border-bottom: 1px solid @cs-img-border;
+        box-shadow: 0 4px 4px -2px @cs-img-shadow;
+    }
+    img.except {
+        border: none;
+        box-shadow: none;
+    }
+    p {
+        font-size: 20px;
+    }
+    .foot {
+        text-align: center;
+    }
+}
+
+.cafedelight.banner {
+    background: url('/img/cdl-banner.png') center no-repeat;
+    background-size: cover;
+    height: 296px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.cafedelight.caption {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    padding: 0 10px 0 10px;
+}
