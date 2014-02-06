@@ -29,9 +29,11 @@ app.use(less_middleware(less_opts))
 app.use(express.static(path.join(__dirname, 'static')))
 
 app.get('/', routes.index)
+app.get('/blog', function (req, res) { res.render('blog') })
 app.get('/tarboosh', routes.tarboosh)
 app.get('/ahlure', routes.ahlure)
 app.get('/cafedelight', routes.cafedelight)
+app.get('/logos', routes.logos)
 
 app.get('/palettes', function (req, resp) {
     resp.render('palettes')

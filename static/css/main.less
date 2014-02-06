@@ -1,7 +1,5 @@
-// 768
-// 992
-// 1200
-@tablet: 768px; @sm-screen: 992px;
+@tablet: 768px;
+@sm-screen: 992px;
 @screen: 1200px;
 
 @white: #FDFBF3;
@@ -29,6 +27,8 @@
 
 @hex-bg: @rich-red;
 
+@body-fg: @blue-black;
+
 @import 'util.less';
 @import 'pages.less';
 @import 'hexes.less';
@@ -50,6 +50,7 @@
 }
 
 html, body { height: 100%; width: 100%; }
+body { color: @body-fg; }
 
 h1,h2,h3,h4,h5,h6 {
     font-family: Engravers, Helvetica, sans-serif;
@@ -63,6 +64,12 @@ h4, .h4 { font-size: 28px; }
 h5, .h5 { font-size: 22px; }
 h6, .h6 { font-size: 16px; }
 
+.sig {
+    font-family: Engravers, Helvetica, sans-serif;
+    font-size: 28px;
+    letter-spacing: 7px;
+}
+
 p {
     font-family: KozGo-Pro, 'Times New Roman', serif;
     font-size: 20px;
@@ -72,9 +79,10 @@ p {
 
 .button(@color) {
     background: @color;
-    border-bottom: 2px solid darken(@color, 15%);
+    border-bottom: 3px solid darken(@color, 15%);
+    //box-shadow: 0px 5px 0 -3px darken(@color, 15%);
     color: lighten(@color, 60%);
-    border-radius: 3px;
+    //border-radius: 3px;
     text-align: center;
     &:active {
         background: darken(@color, 25%);
@@ -91,8 +99,10 @@ p {
     width: 50px;
     height: 50px;
     line-height: 50px;
+
     .button(@navbar-button);
-    background: url('/img/menu-button.png') no-repeat center;
+
+    background: url('/img/menu-button.png') repeat-y center;
     background-color: @navbar-button;
 }
 
@@ -179,36 +189,78 @@ p {
     box-shadow: 0px 0px 2px 0px #111,
         inset 0px -2px 0px 0px @left-panel-inset;
     border-bottom: 1px solid #b7acac;
+    min-height: 134px;
     padding-bottom: 1em;
     z-index: 1;
     .logo-container {
         background: @logo-bg;
         padding: 0.3em;
-        box-shadow: 1px 11px 2px -7px #111;
+        //border-bottom: 4px solid #1D0202;
+        box-shadow: 1px 9px 0 -7px #1D0202;
+        //box-shadow: 1px 11px 2px -7px #111;
         img {
             display: block;
             margin: 0 auto;
             max-width: 100%;
         }
     }
-    .nav-button {
-        margin: 15px 0 0 15px;
+
+    .controls {
+        .nav-button {
+            float: left; 
+            margin-left: 15px;
+            margin-top: 15px;
+        } 
+
+        .fb-button {
+            float: right; 
+            margin-right: 15px;
+            margin-top: 15px;
+        }
+
+        .mail-icon {
+            width: 50px; 
+            height: 50px;
+            margin-top: 15px;
+            margin-right: 15px;
+            float: right;
+            display: block;
+            background: url('/img/mail-icon.png') no-repeat;
+        }
     }
+
     .sidebar {
         display: none;
+        clear: both;
         background: @white;
-        margin: 0 auto;
+        background: rgba(253, 251, 243, 0.6);
+        //border-bottom: 4px solid #CB5F2E;
+        box-shadow: 0px 9px 0px -6px #640000;
+        margin: 0 auto 0;
         width: 90%;
-        border-radius: 4px;
         padding: 1em;
-        margin-top: 2em;
+        margin-top: 10em;
         text-align: center;
-        h2 {
+        p {
             font-size: 22px;
         }
+        .cta {
+            font-family: "Engravers", Helvitca, sans-serif; 
+        }
+
+        .email-cta {
+            margin-top: 24px; 
+            font-family: "Engravers", Helvitca, sans-serif; 
+        }
+
         p.phone {
             font-size: 24px;
             font-weight: bold;
+            color: @sidebar-copy;
+        }
+
+        .email {
+            font-size: 20px; 
             color: @sidebar-copy;
         }
     }
@@ -236,6 +288,7 @@ p {
             margin-right: 6px;
             margin-left: 6px;
         }
+
         .sidebar {
             display: block;
         }

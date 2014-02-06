@@ -9,8 +9,7 @@ html
     meta(name="author", content="")
     meta(name="viewport", content="initial-scale=1")
 
-    link(rel="stylesheet",
-      href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/css/vendor/bootstrap.min.css")
     link(rel="stylesheet", href="/css/main.css")
 
     link(rel="shortcut icon", href="/img/favicon.ico")
@@ -22,20 +21,31 @@ html
           li
             a(href="/") Home
           li
-            a#portfolio-anchor(href="#portfolio") Our Portfolio
+            a#portfolio-anchor(href="/#portfolio") Our Portfolio
+          li
+            a#blog-anchor(href="/blog") Our Blog
 
       div#left-panel.left-panel
         header.logo-container
           a(href="/"): img(src="/img/el_header_logo.png")
-        #nav-button.nav-button
+
+        .controls
+          #nav-button.nav-button
+          a.fb-anchor(href="http://facebook.com/elcreativegroup", target="_blank") 
+            img#fb-button.fb-button(src="/img/fb-icon.png")
+          a.mail-icon(href="mailto:info@elcreativegroup.com")
 
         .sidebar
-          h2 Let's talk about your project!
-          p.phone 931 334 1009
+          p.cta To schedule a consultation or inquire about our services, call us!
+          p.phone (931) 334 1009
+          p.email-cta or email us at
+          p.email info@elcreativegroup.com 
 
       block content
 
-    script(src="//code.jquery.com/jquery-1.10.2.min.js")
-    script(src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js")
+    //script(src="//code.jquery.com/jquery-1.10.2.min.js")
+    //script(src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js")
+    script(src='/js/vendor/jquery.min.js')
+    script(src='/js/vendor/bootstrap.min.js')
     script(src="/js/main.js")
 
