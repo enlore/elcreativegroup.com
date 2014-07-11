@@ -18,10 +18,14 @@
 @white: #efefef;
 @welcome-fg: @white;
 
+@red: #880000;
+@nav-hover-fg: @red;
+
 @import 'util.less';
 @import 'footer.less';
 
 html { min-height: 100%; position: relative; }
+
 body {
     background-color: @body-bg;
     //padding-top: 90px;
@@ -43,6 +47,17 @@ body {
         padding-bottom: 1em;
         padding-top: 1em;
         height: 150px;
+    }
+
+    li > a {
+        font-size: 22px; 
+        color: @white;
+        &:active, &:hover {
+            background-color: @nav-bg-fallback;
+            background-color: @nav-bg; 
+            color: @nav-hover-fg;
+
+        }
     }
 }
 
