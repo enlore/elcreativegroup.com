@@ -3,33 +3,65 @@
 @medium: 992px;
 @large: 1200px;
 
+@black-alpha: rgba(0, 0, 0, 0.8);
+@nav-bg: @black-alpha;
+@welcome-bg: @black-alpha;
+
 @black: #000;
-@nav-bg-fb: @black;
-@nav-bg: rgba(0, 0, 0, 0.8);
+@nav-bg-fallback: @black;
+@welcome-bg-fallback: @black;
+@footer-bg: @black;
 
 @grey: #444;
 @body-bg: @grey;
 
-@import 'util.less';
+@white: #efefef;
+@welcome-fg: @white;
 
+@import 'util.less';
+@import 'footer.less';
+
+html { min-height: 100%; position: relative; }
 body {
     background-color: @body-bg;
-    height: 4000px;
-    padding-top: 90px;
+    //padding-top: 90px;
     border-top: 70px solid black;
+    margin-bottom: 250px;
 
     @media (min-width: @tablet) {
         border-top: 150px solid black;
-        padding-top: 70px;
+        //padding-top: 70px;
     }
 }
 
 .navbar-elcg {
+    background-color: @nav-bg-fallback;
     background-color: @nav-bg;
+    margin-bottom: 0;
 
     @media (min-width: @tablet) {
         padding-bottom: 1em;
         padding-top: 1em;
         height: 150px;
     }
+}
+
+header {
+    height: 600px;
+    background-image: url('/img/city_banner.jpg');
+    background-position: center center;
+    position: relative;
+
+    .welcome {
+        margin-top: 5em;
+        background-color: @welcome-bg-fallback;
+        background-color: @welcome-bg;
+        color: @welcome-fg;
+        padding: 2em;
+
+        h1 { margin: 0; font-size: 60px; }
+        h2 { font-size: 54px; } 
+        p { font-size: 18px; }
+    }
+
 }
