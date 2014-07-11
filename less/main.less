@@ -1,0 +1,35 @@
+@phone: 360px;
+@tablet: 768px;
+@medium: 992px;
+@large: 1200px;
+
+@black: #000;
+@nav-bg-fb: @black;
+@nav-bg: rgba(0, 0, 0, 0.8);
+
+@grey: #444;
+@body-bg: @grey;
+
+@import 'util.less';
+
+body {
+    background-color: @body-bg;
+    height: 4000px;
+    padding-top: 90px;
+    border-top: 70px solid black;
+
+    @media (min-width: @tablet) {
+        border-top: 150px solid black;
+        padding-top: 70px;
+    }
+}
+
+.navbar-elcg {
+    background-color: @nav-bg;
+
+    @media (min-width: @tablet) {
+        padding-bottom: 1em;
+        padding-top: 1em;
+        height: 150px;
+    }
+}
