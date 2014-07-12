@@ -4,11 +4,13 @@ var express     = require('express')
   , fs          = require('fs')
   , path        = require('path')
   , config      = JSON.parse(fs.readFileSync('config.json'))
+  , bodyParser  = require('body-parser')
   ;
 
 // dependencies
 var less        = require('less-middleware')
   , morgan      = require('morgan')
+  ;
 
 // express config
 app.set('view engine', 'jade')
@@ -40,8 +42,15 @@ app.use(morgan({
     }
 }))
 
+app.use(bodyParser.urlencoded({extended: false}))
+
 app.get('/', function (req, res) {
     res.render('index')
+})
+
+app.post('/contact-form', function (req, res) {
+    console.log(req.body)
+    res.json(200, {status: 'recieved, no action', body: req.body})
 })
 
 module.exports = app
