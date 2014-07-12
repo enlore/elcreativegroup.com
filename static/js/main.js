@@ -1,6 +1,10 @@
 $(document).ready(function (e) {
     $contactForm = $('#contact-form') 
 
+    $contactForm.delegate('input.form-control, textarea', 'focus', function (e) {
+        $contactForm.find('h3.success').text('Send Us A Message').removeClass('success')
+    })
+
     $contactForm.on('submit', function (e) {
         e.preventDefault() 
 
@@ -48,7 +52,7 @@ $(document).ready(function (e) {
                     $(field).val('') 
                 })
 
-                $contactForm.find('h3').replaceWith('<p class="h3 success">Thanks! We\'ll be in touch soon.</p>')
+                $contactForm.find('h3').replaceWith('<h3 class="success">Thanks! We\'ll be in touch soon.</h3>')
             })
 
             contactjqXHR.fail(function (jqXHR, stat, err) {
