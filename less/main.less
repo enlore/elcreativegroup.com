@@ -11,15 +11,17 @@
 @nav-bg-fallback: @black;
 @welcome-bg-fallback: @black;
 @footer-bg: @black;
+@body-bg: @black;
 
 @grey: #444;
-@body-bg: @grey;
 
 @white: #efefef;
 @welcome-fg: @white;
+@form-fg: @white;
 
 @red: #880000;
 @nav-hover-fg: @red;
+@form-focus: @red;
 
 @import 'util.less';
 @import 'footer.less';
@@ -30,7 +32,7 @@ body {
     background-color: @body-bg;
     //padding-top: 90px;
     border-top: 70px solid black;
-    margin-bottom: 250px;
+    margin-bottom: 450px;
 
     @media (min-width: @tablet) {
         border-top: 150px solid black;

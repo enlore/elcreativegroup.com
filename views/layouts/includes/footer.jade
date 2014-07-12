@@ -1,5 +1,37 @@
 footer
   .container
     .row
-      .col-sm-12
-        p.h1 Footer
+      .col-sm-4
+        h3 Footer
+
+      .col-sm-4
+        .address
+          h3 Contact Us
+          p Call us:
+          p
+            a(href="tel:19313041009") (931)304-1009
+          p Or email:
+          p
+            a(href="mailto:info@elcreativegroup.com") info@elcreativegroup.com
+
+      .col-sm-4
+        h3 Send Us A Message
+        form#contact-form(action="", method="post")
+          .form-group
+            label(for="human_name") Name
+            input.form-control(type="text", name="human_name")
+
+          .form-group
+            label(for="email") Email
+            input.form-control(type="text", name="email")
+
+          .form-group
+            label(for="phone") Phone
+            input.form-control(type="text", name="phone")
+
+          .form-group
+            label(for="message") Message
+            textarea.form-control(name="message", rows=4)
+
+          .form-group
+            button.btn.btn-contact(type="submit") Get In Touch
