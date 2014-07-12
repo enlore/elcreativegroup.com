@@ -15,8 +15,11 @@ footer#contact-us
             a(href="mailto:info@elcreativegroup.com") info@elcreativegroup.com
 
       .col-sm-4
-        h3 Send Us A Message
         form#contact-form(action="", method="post")
+          h3 Send Us A Message
+          input(type="hidden", name="_csrf", value="boobs")
+          input(type="hidden", name="hush")
+
           .form-group
             label(for="human_name") Name
             input.form-control(type="text", name="human_name")
