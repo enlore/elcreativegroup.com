@@ -46,6 +46,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 app.get('/', function (req, res) { res.render('index') })
 app.get('/about-us', function (req, res) { res.render('about') })
+app.get('/faq', function (req, res) { res.render('faq') })
 
 app.post('/contact-form', function (req, res) {
     console.log(req.body)
