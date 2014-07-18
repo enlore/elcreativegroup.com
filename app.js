@@ -44,9 +44,8 @@ app.use(morgan({
 
 app.use(bodyParser.urlencoded({extended: false}))
 
-app.get('/', function (req, res) {
-    res.render('index')
-})
+app.get('/', function (req, res) { res.render('index') })
+app.get('/about-us', function (req, res) { res.render('about') })
 
 app.post('/contact-form', function (req, res) {
     console.log(req.body)
