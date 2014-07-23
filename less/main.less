@@ -7,6 +7,7 @@
 @nav-bg: @black-alpha;
 @welcome-bg: @black-alpha;
 @bio-bg: @black-alpha;
+@case-study-link-bg: @black-alpha;
 
 @black: #000;
 @nav-bg-fallback: @black;
@@ -14,6 +15,7 @@
 @footer-bg: @black;
 @body-bg: @black;
 @bio-bg-fallback: @black;
+@case-study-link-bg-fallback: @black;
 
 @maroon: #1d0202;
 @portrait-shadow: @maroon;
@@ -34,11 +36,11 @@
 @form-focus: @blue;
 @form-success: @blue;
 
+@import 'scaffolding.less';
 @import 'util.less';
 @import 'footer.less';
 @import 'about.less';
 
-//html { min-height: 100%; position: relative; }
 
 body {
     background-color: @body-bg;
@@ -74,8 +76,8 @@ body {
 
 header {
     //height: 600px;
-    background-image: url('/img/franklin.jpg');
-    background-position: center center;
+    background-image: url('/img/city_scape.png');
+    background-position: center -300px;
     position: relative;
     padding-bottom: 4em;
 
@@ -97,6 +99,20 @@ header {
     ul { 
         padding: 0;
         overflow: hidden;
+
+        li {
+            position: relative;
+        }
+
+        span {
+            position: absolute; 
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            background-color: @case-study-link-bg-fallback;
+            background-color: @case-study-link-bg;
+            font-size: 20px;
+        }
     }
 }
 
