@@ -28,6 +28,7 @@
 
 @red: #880000;
 @nav-hover-fg: @red;
+@the-word-you: @red;
 
 @err-red: #fc3232;
 @form-error: @err-red;
@@ -36,18 +37,19 @@
 @form-focus: @blue;
 @form-success: @blue;
 
+@border-nav-connection: 119px;
+
 @import 'scaffolding.less';
 @import 'util.less';
 @import 'footer.less';
 @import 'about.less';
-
 
 body {
     background-color: @body-bg;
     border-top: 70px solid black;
 
     @media (min-width: @tablet) {
-        border-top: 150px solid black;
+        border-top: @border-nav-connection solid black;
     }
 }
 
@@ -59,7 +61,7 @@ body {
     @media (min-width: @tablet) {
         padding-bottom: 1em;
         padding-top: 1em;
-        height: 150px;
+        height: @border-nav-connection;
     }
 
     li > a {
@@ -88,9 +90,22 @@ header {
         color: @welcome-fg;
         padding: 2em;
 
-        h1 { margin: 0; font-size: 60px; }
+        h1 {
+            margin-top: 0;
+            font-size: 30px;
+            border-bottom: 1px solid @white;
+            .ampersand {
+                font-size: 25px; 
+            }
+
+            @media (min-width: @tablet) {
+                width: 70%;
+            }
+        }
+
         h2 { font-size: 54px; } 
         p { font-size: 18px; }
+        .red { color: @the-word-you; }
     }
 
 }
