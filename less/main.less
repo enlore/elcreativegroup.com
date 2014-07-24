@@ -29,6 +29,7 @@
 @red: #880000;
 @nav-hover-fg: @red;
 @the-word-you: @red;
+@hex-bg: @red;
 
 @err-red: #fc3232;
 @form-error: @err-red;
@@ -43,6 +44,7 @@
 @import 'util.less';
 @import 'footer.less';
 @import 'about.less';
+@import 'hexes.less';
 
 body {
     background-color: @body-bg;
@@ -81,7 +83,7 @@ header {
     background-image: url('/img/city_scape.png');
     background-position: center -300px;
     position: relative;
-    padding-bottom: 4em;
+    padding-bottom: 7em;
 
     .welcome {
         margin-top: 5em;
@@ -111,6 +113,13 @@ header {
 }
 
 .our-work {
+    padding-top: 3em;
+    h2 {
+        border-bottom: 1px solid @white; 
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
     ul { 
         padding: 0;
         overflow: hidden;
@@ -142,7 +151,8 @@ header {
         padding-bottom: 20px;
         
         li {
-            font-size: 22px; 
+            .engravers;
+            font-size: 40px; 
             margin-top: 15px;
         }
     }
