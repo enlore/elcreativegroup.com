@@ -1,4 +1,11 @@
 $(document).ready(function (e) {
+    setTimeout(function () {
+        console.log('timeout fun')
+        $('.masque').fadeOut(600, function () {
+            $('.masque').removeClass('active') 
+        }) 
+    }, 2000)
+
     $contactForm = $('#contact-form') 
 
     $contactForm.delegate('input.form-control, textarea', 'focus', function (e) {
