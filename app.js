@@ -31,6 +31,7 @@ var lessOptions = {
 
 if (app.get('env') === 'development') {
    lessOptions.debug = true 
+   app.locals.pretty = true
 }
 
 app.use(less(path.join(__dirname, 'less'), lessOptions))
