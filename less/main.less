@@ -17,6 +17,7 @@
 @body-bg: @black;
 @bio-bg-fallback: @black;
 @case-study-link-bg-fallback: @black;
+@services-border: @black;
 
 @maroon: #1d0202;
 @portrait-shadow: @maroon;
@@ -24,7 +25,6 @@
 @grey: #efefef;
 
 @off-black: #424344;
-@services-border: @off-black;
 
 @white: #eee;
 @welcome-fg: @white;
@@ -43,6 +43,7 @@
 @form-success: @blue;
 
 @border-nav-connection: 119px;
+
 
 @import 'scaffolding.less';
 @import 'util.less';
@@ -173,7 +174,7 @@ header {
     background-position: center center;
     background-size: cover;
     box-shadow: inset 0 0 0 10px black;
-    border: 40px solid @services-border;
+    border: 2em solid @services-border;
     padding-top: 4em;
     padding-bottom: 5em;
 }
