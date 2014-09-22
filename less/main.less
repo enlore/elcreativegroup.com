@@ -101,10 +101,9 @@ body {
         font-size: 22px; 
         color: @white;
         &:active, &:hover {
-            background-color: @nav-bg-fallback;
-            background-color: @nav-bg; 
+            background-color: transparent; 
             color: @nav-hover-fg;
-
+            border-bottom: 1px solid @nav-hover-fg;
         }
     }
 }
