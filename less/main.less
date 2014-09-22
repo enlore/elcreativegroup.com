@@ -107,6 +107,8 @@ body {
 
 section h2 {
     color: @section-head-color;
+    border-bottom: 1px solid @section-head-color;
+    padding-bottom: 5px;
 }
 
 header {
@@ -183,21 +185,22 @@ header {
     padding-top: 4em;
     padding-bottom: 5em;
 
-    h2 { 
-        border-bottom: 1px solid @section-head-color;
-        padding-bottom: 5px;
-    }
 
     .our-services {
-        font-size: 24px;
-        text-transform: uppercase;
         padding: 40px;
         padding: 0; 
         .engravers;
         color: @services-color;
+        width: 86%;
+        margin: 0 auto;
             
         li {
-            padding-top: 40px;
+            font-size: 24px;
+            padding-top: 60px;
+
+            h3 {
+                text-transform: uppercase;
+            }
         }
 
         li.alt {
