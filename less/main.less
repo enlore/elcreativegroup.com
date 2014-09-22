@@ -113,11 +113,16 @@ body {
     }
 }
 
-section h2 {
-    color: @section-head-color;
-    border-bottom: 1px solid @section-head-color;
-    padding-bottom: 5px;
-    font-size: 36px;
+section {
+    padding-top: 6em;
+    padding-bottom: 6em;
+
+    h2 {
+        color: @section-head-color;
+        border-bottom: 1px solid @section-head-color;
+        padding-bottom: 5px;
+        font-size: 36px;
+    }
 }
 
 header {
@@ -153,38 +158,13 @@ header {
 
 
 .our-work {
-    padding-top: 6em;
-    padding-bottom: 6em;
-
     .top-clients {
         padding-top: 40px;
-    }
-
-    ul { 
-        padding: 0;
-        overflow: hidden;
-
-        li {
-            position: relative;
-        }
-
-        span {
-            position: absolute; 
-            top: 25%;
-            width: 100%;
-            text-align: center;
-            background-color: @case-study-link-bg-fallback;
-            background-color: @case-study-link-bg;
-            font-size: 20px;
-        }
     }
 }
 
 .services-container {
-    padding-top: 4em;
-    padding-bottom: 5em;
     background: black;
-
 
     .our-services {
         padding: 40px;
