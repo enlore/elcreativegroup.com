@@ -3,7 +3,7 @@ footer#contact-us
     .row
       .col-sm-4
         h3 E|L Creative Group
-        ul
+        ul.site-nav
           li
             a(href="/") Home
           li
@@ -17,13 +17,16 @@ footer#contact-us
 
       .col-sm-4
         .address
-          h3 Contact Us
-          p Call us:
+          h3 Call us
           p
-            a(href="tel:19313041009") (931)304-1009
-          p Or email:
+            a(href="tel:19313041009")
+              button.btn.btn-elcg (931)304-1009
+
+
+          h3 Or email
           p
-            a(href="mailto:info@elcreativegroup.com") info@elcreativegroup.com
+            a(href="mailto:info@elcreativegroup.com") 
+              button.btn.btn-elcg info@elcreativegroup.com
 
       .col-sm-4
         form#contact-form(action="", method="post")
