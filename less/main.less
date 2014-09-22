@@ -35,8 +35,6 @@
 @p-color: @white;
 
 @red: #880000;
-@nav-hover-fg: @red;
-@the-word-you: @red;
 @hex-bg: @red;
 
 @err-red: #fc3232;
@@ -48,6 +46,8 @@
 @btn-border: @blue;
 @btn-color: @blue;
 @section-head-color: @blue;
+@the-word-you: @blue;
+@nav-hover-fg: @blue;
 
 @border-nav-connection: 119px;
 
@@ -109,6 +109,7 @@ section h2 {
     color: @section-head-color;
     border-bottom: 1px solid @section-head-color;
     padding-bottom: 5px;
+    font-size: 36px;
 }
 
 header {
@@ -145,22 +146,15 @@ header {
     }
 }
 
-.top-clients {
-    text-align: center;
-    padding-top: 6em;
-    padding-bottom: 6em;
-}
 
 .our-work {
     padding-top: 6em;
     padding-bottom: 6em;
-    h2 {
-        color: @white;
-        border-bottom: 1px solid @white; 
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
+
+    .top-clients {
+        padding-top: 40px;
     }
+
     ul { 
         padding: 0;
         overflow: hidden;
