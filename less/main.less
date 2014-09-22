@@ -22,7 +22,7 @@
 @maroon: #1d0202;
 @portrait-shadow: @maroon;
 
-@pink: #882077;
+@pink: #7D1A77;
 @services-color: @pink;
 
 @grey: #efefef;
@@ -47,10 +47,9 @@
 @form-success: @blue;
 @btn-border: @blue;
 @btn-color: @blue;
+@section-head-color: @blue;
 
 @border-nav-connection: 119px;
-
-
 
 @import 'scaffolding.less';
 @import 'util.less';
@@ -104,6 +103,10 @@ body {
 
         }
     }
+}
+
+section h2 {
+    color: @section-head-color;
 }
 
 header {
@@ -180,24 +183,25 @@ header {
     padding-top: 4em;
     padding-bottom: 5em;
 
+    h2 { 
+        border-bottom: 1px solid @section-head-color;
+        padding-bottom: 5px;
+    }
+
     .our-services {
         color: @pink;
         font-size: 24px;
         text-transform: uppercase;
+        text-align: center;
         padding: 40px;
 
-        h2 { border-bottom: 2px solid black; }
 
-        ul {
             padding: 0; 
-            padding-bottom: 20px;
             
-            li {
-                .engravers;
-                color: @services-color;
-                font-size: 40px; 
-                margin-top: 15px;
-            }
+        li {
+            .engravers;
+            color: @services-color;
+            padding-top: 40px;
         }
     }
 }
