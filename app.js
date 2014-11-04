@@ -49,6 +49,10 @@ app.get('/', function (req, res) { res.render('index') })
 app.get('/about-us', function (req, res) { res.render('about') })
 app.get('/faq', function (req, res) { res.render('faq') })
 
+app.get('/portfolio/kate-dyer-campaign', function (req, res) {
+    res.render('kate_dyer_campaign')
+})
+
 app.post('/contact-form', function (req, res) {
     console.log(req.body)
     res.json(200, {status: 'recieved, no action', body: req.body})
