@@ -1,19 +1,45 @@
 $(document).ready(function (e) {
+    skrollr.init({forceHeight: false})
+
+    /*
+     * Navbar squeeze
+     * ****************************/
+    $window = $(window)
+    $navbar = $('.navbar-elcg')
+    $logo = $('.logo')
+    $window.on('scroll', function (e) {
+        console.log($(window).scrollTop())
+
+        if ($window.scrollTop() >= 100) {
+            $navbar.addClass('active')
+            $logo.addClass('active')
+        } else if ($window.scrollTop() < 100) {
+            $navbar.removeClass('active')
+            $logo.removeClass('active')
+        }
+    })
+
+    /*
+     * Loading masque
+     * ****************************/
     setTimeout(function () {
         console.log('timeout fun')
         $('.masque').fadeOut(600, function () {
-            $('.masque').removeClass('active') 
-        }) 
+            $('.masque').removeClass('active')
+        })
     }, 2000)
 
-    $contactForm = $('#contact-form') 
+    /*
+     * Contact form validation
+     * ****************************/
+    $contactForm = $('#contact-form')
 
     $contactForm.delegate('input.form-control, textarea', 'focus', function (e) {
         $contactForm.find('h3.success').text('Send Us A Message').removeClass('success')
     })
 
     $contactForm.on('submit', function (e) {
-        e.preventDefault() 
+        e.preventDefault()
 
         var fieldsMessages = [
             {name: 'human_name', message: 'What\'s your name?', label: 'Your name:'},
@@ -25,9 +51,9 @@ $(document).ready(function (e) {
         var hasErrors = false
 
         for (var i = 0; i < fieldsMessages.length; i ++) {
-            var field = $contactForm.find('[name=' + fieldsMessages[i].name + ']') 
+            var field = $contactForm.find('[name=' + fieldsMessages[i].name + ']')
             if (field.val() === '') {
-                console.log(fieldsMessages[i].message) 
+                console.log(fieldsMessages[i].message)
                 $contactForm.find('[for='+ fieldsMessages[i].name +']').text(fieldsMessages[i].message)
                 field.parent('.form-group').addClass('has-error')
                 hasErrors = true
@@ -45,18 +71,18 @@ $(document).ready(function (e) {
                 },
                 data: {
                     humane_name : $contactForm.find('[name=human_name]').val(),
-                    phone       : $contactForm.find('[name=phone]').val(), 
-                    email       : $contactForm.find('[name=email]').val(), 
-                    message     : $contactForm.find('[name=message]').val() 
+                    phone       : $contactForm.find('[name=phone]').val(),
+                    email       : $contactForm.find('[name=email]').val(),
+                    message     : $contactForm.find('[name=message]').val()
                 }
             })
 
             contactjqXHR.done(function (data, stat, jqXHR) {
-                console.log(stat, data) 
+                console.log(stat, data)
                 var $fields = $contactForm.find('input[type=text], textarea')
 
                 $fields.each(function (_, field) {
-                    $(field).val('') 
+                    $(field).val('')
                 })
 
                 $contactForm.find('h3').replaceWith('<h3 class="success">Thanks! We\'ll be in touch soon.</h3>')
