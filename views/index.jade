@@ -1,136 +1,137 @@
 extends layouts/base
 block body
-  header
-    .container
-      .row
-        .col-sm-10.col-sm-offset-1
-          .welcome.text-center
-            h1.center-block Elliott <span class="ampersand">&amp;</span> Lorenson
-            h2.spaced-out created with <span class="red engravers">you</span> in mind
+  .bg-wrap.index(data-start="background-position: -100px -200px;", data-end="background-position: -400px -700px;")
+    header
+      .container
+        .row
+          .col-sm-10.col-sm-offset-1
+            .welcome.text-center
+              h1.center-block Elliott <span class="ampersand">&amp;</span> Lorenson
+              h2.spaced-out created with <span class="red engravers">you</span> in mind
+              p.
+                Thanks for stopping by! We’re Elliott and Lorenson, a
+                Clarksville, TN based design firm specializing in
+                creating custom content from the ground-up, ensuring a
+                product that is as unique as you can imagine.  Whether
+                it’s a website, print media, specific marketing or an
+                entire branding campaign, our work together as a
+                graphic design/developer team with over 15 years of
+                combined experience is at your service.
+
+              p.
+                We want to make your projects stand out. We want you
+                to share it, and be proud of it. Take a look at our
+                portfolio, and let us know when you’re ready to have
+                us elevate your creative ideas to new heights.
+
+              p  Thank you for your business, 
+              p Alexander &amp; Nick
+
+    section.about-us
+      .container
+        .row
+          .col-sm-12.text-center
+            h1 Who We Are
+        .row
+          .col-sm-6.alex
+            .bio
+              h2.text-center W.A. Elliott
+              p.
+                Alexander has been a resident of Clarksville, TN for over 20
+                years. His strong background in graphic design and advertising
+                has spanned over 10 years. A graduate of Austin Peay State
+                University, he has a degree in marketing. During college, he
+                started designing logos and business cards for friends, which
+                eventually led to the formation of W. Alexander Designs, his
+                own independent graphics venture. He also began to expand into
+                print media, which cultivated into an award-winning term as a
+                writer and Advertising Manager for APSU’s student newspaper.
+                These successes translated into a great opportunity for him to
+                move to New York City, where he became an Advertising Executive
+                for Village Voice Media, LLC. He ran into Nick when he returned
+                to Clarksville; a synergy was created, and a new journey
+                began!
+
+              p.
+                When he’s not designing, you can catch Alexander
+                hosting/performing parties as <a href="http://ahlure.net">DJ Ahlure</a>,
+                rock climbing, or out at a myriad of social events in the mid-south.
+
+          .col-sm-6.nick
+            .bio
+              h2.text-center N.E. Lorenson
+              p.
+                As an exiled son of Mars, Nick has spent his time on Earth
+                studying application and UX design, programming, SEO, and the
+                inner workings of the Internet.  Deep down, he’s a decent guy
+                that dreams of one day returning home to be among his people.
+                Until then, he builds websites, brainstorms interesting
+                solutions for your problems, and spends his free time riding
+                his bicycle around town.  Such is the life of a magic man.
+
+    section.services
+      .container
+        .row
+          .col-sm-12.text-center
+            h1 Our Services
+
+        .row
+          .col-sm-6
+            .wrap
+              h2 Web Design and Development
+
+          .col-sm-6
+            .wrap
+              h2 Branding
+
+        .row
+          .col-sm-6
+            .wrap
+              h2 Social Media Marketing
+
+          .col-sm-6
+            .wrap
+              h2 Print Media Design
+
+    .angle-border
+    section#our-work.our-work
+      .container
+        .row
+          .col-sm-12.text-center
+            h1 Our Work
+
+        .row.text-center.top-clients
+          .col-sm-4
+            img.img-responsive(src="/img/dyer_splash.png")
+            h1 The Kate Dyer Campaign
+            p.lead The Campaign to Elect Kate Dyer Circuit Court Judge
             p.
-              Thanks for stopping by! We’re Elliott and Lorenson, a
-              Clarksville, TN based design firm specializing in
-              creating custom content from the ground-up, ensuring a
-              product that is as unique as you can imagine.  Whether
-              it’s a website, print media, specific marketing or an
-              entire branding campaign, our work together as a
-              graphic design/developer team with over 15 years of
-              combined experience is at your service.
+              We were tasked with elevating the campaign to elect Kate Dyer to
+              the seat of Circuit Court Judge in Clarksville.  We created an
+              advertising campaign, we designed and built a beautiful website,
+              integrated with a credit card processor, and helped Kate Dyer enjoy
+              a powerful competitive edge on the Clarksville election battle ground.
 
+          .col-sm-4
+            img.img-responsive(src="/img/rrs_logo_splash.png")
+            h1 The Red River Sirens
+            p.lead Local Roller Derby Extraordinaires
             p.
-              We want to make your projects stand out. We want you
-              to share it, and be proud of it. Take a look at our
-              portfolio, and let us know when you’re ready to have
-              us elevate your creative ideas to new heights.
+              Clarksville's foremost roller derby team approached us to give
+              their website a much needed face lift.  Equipped with an
+              beautifully updated design, some quality media, and an
+              enhanced online presence, the Sirens have seen record growth
+              in new applicants for the team and attendance to their games!
+                
 
-            p  Thank you for your business, 
-            p Alexander &amp; Nick
-
-  section.about-us
-    .container
-      .row
-        .col-sm-12.text-center
-          h1 Who We Are
-      .row
-        .col-sm-6.alex
-          .bio
-            h2.text-center W.A. Elliott
+          .col-sm-4
+            img.img-responsive(src="/img/rrgarage_splash.jpg")
+            h1 R&R Garage Doors
+            p.lead Hometown Garage Sales and Services
             p.
-              Alexander has been a resident of Clarksville, TN for over 20
-              years. His strong background in graphic design and advertising
-              has spanned over 10 years. A graduate of Austin Peay State
-              University, he has a degree in marketing. During college, he
-              started designing logos and business cards for friends, which
-              eventually led to the formation of W. Alexander Designs, his
-              own independent graphics venture. He also began to expand into
-              print media, which cultivated into an award-winning term as a
-              writer and Advertising Manager for APSU’s student newspaper.
-              These successes translated into a great opportunity for him to
-              move to New York City, where he became an Advertising Executive
-              for Village Voice Media, LLC. He ran into Nick when he returned
-              to Clarksville; a synergy was created, and a new journey
-              began!
-
-            p.
-              When he’s not designing, you can catch Alexander
-              hosting/performing parties as <a href="http://ahlure.net">DJ Ahlure</a>,
-              rock climbing, or out at a myriad of social events in the mid-south.
-
-        .col-sm-6.nick
-          .bio
-            h2.text-center N.E. Lorenson
-            p.
-              As an exiled son of Mars, Nick has spent his time on Earth
-              studying application and UX design, programming, SEO, and the
-              inner workings of the Internet.  Deep down, he’s a decent guy
-              that dreams of one day returning home to be among his people.
-              Until then, he builds websites, brainstorms interesting
-              solutions for your problems, and spends his free time riding
-              his bicycle around town.  Such is the life of a magic man.
-
-  section.services
-    .container
-      .row
-        .col-sm-12.text-center
-          h1 Our Services
-
-      .row
-        .col-sm-6
-          .wrap
-            h2 Web Design and Development
-
-        .col-sm-6
-          .wrap
-            h2 Branding
-
-      .row
-        .col-sm-6
-          .wrap
-            h2 Social Media Marketing
-
-        .col-sm-6
-          .wrap
-            h2 Print Media Design
-
-  .angle-border
-  section#our-work.our-work
-    .container
-      .row
-        .col-sm-12.text-center
-          h1 Our Work
-
-      .row.text-center.top-clients
-        .col-sm-4
-          img.img-responsive(src="/img/dyer_splash.png")
-          h1 The Kate Dyer Campaign
-          p.lead The Campaign to Elect Kate Dyer Circuit Court Judge
-          p.
-            We were tasked with elevating the campaign to elect Kate Dyer to
-            the seat of Circuit Court Judge in Clarksville.  We created an
-            advertising campaign, we designed and built a beautiful website,
-            integrated with a credit card processor, and helped Kate Dyer enjoy
-            a powerful competitive edge on the Clarksville election battle ground.
-
-        .col-sm-4
-          img.img-responsive(src="/img/rrs_logo_splash.png")
-          h1 The Red River Sirens
-          p.lead Local Roller Derby Extraordinaires
-          p.
-            Clarksville's foremost roller derby team approached us to give
-            their website a much needed face lift.  Equipped with an
-            beautifully updated design, some quality media, and an
-            enhanced online presence, the Sirens have seen record growth
-            in new applicants for the team and attendance to their games!
+              Every business, large and small, has the potential to benefit
+              from a beautiful online presence beefed up by a strong analytical
+              understanding of customer traffic.  We worked with this local
+              small business to create a lovely marketing site, complete with
+              installed analytics and searchable, SEO savvy content.
               
-
-        .col-sm-4
-          img.img-responsive(src="/img/rrgarage_splash.jpg")
-          h1 R&R Garage Doors
-          p.lead Hometown Garage Sales and Services
-          p.
-            Every business, large and small, has the potential to benefit
-            from a beautiful online presence beefed up by a strong analytical
-            understanding of customer traffic.  We worked with this local
-            small business to create a lovely marketing site, complete with
-            installed analytics and searchable, SEO savvy content.
-            
