@@ -10,7 +10,7 @@
 }
 
 .hex-box.red {
-    background-color: @hex-bg;
+    background-color: $hex-bg;
 }
 
 .hex-box {
@@ -28,7 +28,7 @@
         background-color: rgba(20, 20, 20, 0.7);
         font-family: "Engravers", Helvetica, sans;
     }
-    &:hover,
+    &:hover, 
     &:active {
         text-decoration: none;
         span {
@@ -42,7 +42,7 @@
 .hex-box.cafe-de-light { background-image: url('/img/bars/cafe-lg.png'); border-bottom: 1px solid #141414; }
 .hex-box.graphic-design { background-image: url('/img/bars/graphic-design-lg.png'); border-bottom: 1px solid #141414; }
 
-@media screen and (min-width: @tablet) {
+@media screen and (min-width: $tablet) {
     .portfolio-hexes {
         margin: 7em auto 3em;
         margin-left: -120px;
@@ -72,12 +72,12 @@
             font-family: Engravers, sans-serif;
         }
 
-        .hex-box.tarboosh:hover,
+        .hex-box.tarboosh:hover, 
         .hex-box.tarboosh:active {
             background-image: url('/img/hexes/tarboosh-hex.jpg');
         }
 
-        .hex-box.dj-ahlure:hover,
+        .hex-box.dj-ahlure:hover, 
         .hex-box.dj-ahlure:active {
             background-image: url('/img/hexes/ahlure-hex.png');
         }
@@ -92,7 +92,7 @@
             background-size: 80%;
         }
 
-        .hex-box.graphic-design:hover,
+        .hex-box.graphic-design:hover, 
         .hex-box.graphic-design:active {
             background-image: url('/img/hexes/graphic-design.jpg');
         }
@@ -124,7 +124,7 @@
         overflow: hidden;
     }
 
-    .hex-1:before,
+    .hex-1:before, 
     .hex-2:before {
         content: "";
         background: inherit;
