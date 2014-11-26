@@ -28,44 +28,45 @@ $label-color = $pink;
 
 $grey = #efefef;
 
-$off-black = #424344;
+$off-black = #424344
 
-$white = #eee;
-$welcome-fg = $white;
-$form-fg = $white;
-$p-color = $white;
-$section-head-color = $white;
+$white = #eee
+$welcome-fg = $white
+$form-fg = $white
+$p-color = $white
+$section-head-color = $white
 
-$red = #880000;
-$hex-bg = $red;
+$red = #880000
+$hex-bg = $red
 
-$err-red = #fc3232;
-$form-error = $err-red;
+$err-red = #fc3232
+$form-error = $err-red
 
-$grey-blue = #3e4747;
-$input-bg = $grey-blue;
+$grey-blue = #3e4747
+$input-bg = $grey-blue
 
 
-$blue = #3dfffb;
-$form-focus = $blue;
-$form-success = $blue;
-$btn-border = $blue;
-$btn-color = $blue;
-$the-word-you = $blue;
-$nav-hover-fg = $blue;
-$anchor-color = $blue;
+$blue = #3dfffb
+$form-focus = $blue
+$form-success = $blue
+$btn-border = $blue
+$btn-color = $blue
+$the-word-you = $blue
+$nav-hover-fg = $blue
+$anchor-color = $blue
 
-$purple = #432946;
+$purple = #432946
 
-$border-nav-connection = 119px;
+$border-nav-connection = 119px
 
-@import 'scaffolding.styl';
-@import 'util.styl';
-@import 'footer.styl';
-//@import 'about.styl';
-@import 'hexes.styl';
+@import 'scaffolding'
+@import 'util'
+@import 'footer'
+@import 'hexes'
 
-@import 'dyer.styl';
+// Pages
+@import 'index'
+@import 'dyer'
 
 .masque.active
     background-image url('/img/logo_nav.png')
@@ -201,55 +202,4 @@ header
 
         .red
             color $the-word-you
-
-.about-us
-     // background-image url('//unsplash.it/2200/1200')
-
-      .bio
-        h2  color #eee
-        background-color rgba(0, 0, 0, 0.8)
-        padding 1em
-
-
-
-.services
-    background-color $black
-    .wrap
-        background-image url('//unsplash.it/450/300')
-        background-repeat no-repeat
-        background-position center center
-        margin-left auto
-        margin-right auto
-        height 300px
-        width 500px
-        margin-bottom 30px
-        //position relative
-        line-height 30px
-
-        h2
-            background-color $black
-            text-align center
-            position relative
-            top 120px
-            font-size 30px
-            border-bottom none
-            //position absolute
-
-    .wrap.web-design
-        background-image url("/img/web_design.svg")
-
-    .wrap.print-media
-        background-image url("/img/print_media.svg")
-
-    .wrap.branding
-        background-image url("/img/branding.svg")
-
-    .wrap.social-media
-        background-image url("/img/social_media.svg")
-
-.angle-border
-    background-image url('/img/angle_border.png')
-    background-position center 0px
-    background-repeat no-repeat
-    height 71px
 
