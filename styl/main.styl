@@ -120,7 +120,7 @@ center-abs($object-width) {
     center-abs(127px);
 
     &.active {
-        height: 45px; 
+        height: 45px;
         center-abs(61px);
     }
 }
@@ -138,10 +138,10 @@ center-abs($object-width) {
         height: $border-nav-connection;
 
         &.active {
-            height: $border-nav-connection - 50px; 
+            height: $border-nav-connection - 50px;
 
             li > a {
-                font-size: 18px; 
+                font-size: 18px;
             }
         }
     }
@@ -149,12 +149,12 @@ center-abs($object-width) {
     li > a {
         engravers();
         text-align: center;
-        font-size: 22px; 
+        font-size: 22px;
         letter-spacing: 3px;
         color: $white;
         transition(font-size 200ms ease);
         &:active, &:hover {
-            background-color: transparent; 
+            background-color: transparent;
             color: $nav-hover-fg;
             border-bottom: 1px solid $nav-hover-fg;
         }
@@ -189,7 +189,7 @@ header {
             font-size: 30px;
             border-bottom: 1px solid $white;
             .ampersand {
-                font-size: 25px; 
+                font-size: 25px;
             }
 
             @media (min-width: $tablet) {
@@ -197,7 +197,7 @@ header {
             }
         }
 
-        h2 { font-size: 54px; } 
+        h2 { font-size: 54px; }
         p { font-size: 20px; }
         .red { color: $the-word-you; }
     }
@@ -209,13 +209,13 @@ header {
 
       .bio {
         h2 { color: #eee; }
-        background-color: rgba(0, 0, 0, 0.8); 
+        background-color: rgba(0, 0, 0, 0.8);
         padding: 1em;
       }
 }
 
-.services {
-    .wrap {
+.services
+    .wrap
         background-image: url('//unsplash.it/450/300');
         margin-left: auto;
         margin-right: auto;
@@ -225,17 +225,30 @@ header {
         //position: relative;
         line-height: 30px;
 
-        h2 {
+        h2
             background-color: $black;
             text-align: center;
             position: relative;
             top: 120px;
             font-size: 30px;
             border-bottom: none;
-            //position: absolute;  
-        }
-    }
-}
+            //position: absolute;
+
+    .wrap.web-design
+        background-image url("/img/web_design.svg")
+
+    .wrap.print-media
+        background-image url("/img/print_media.svg")
+
+    .wrap.branding
+        background-image url("/img/branding.svg")
+
+    .wrap.social-media
+        background-image url("/img/social_media.svg")
+
+
+
+
 
 .angle-border {
     background-image: url('/img/angle_border.png');
