@@ -1,11 +1,34 @@
 .our-work
+    h1
+        color $black
+
     .current-gigs
-        .row
+        p
+            font-size 24px
+            color $white
+
+        p.reveal
+            color $black
+
+        a
+            padding 16px
             margin-top 1em
+            display block
+            background-color $black
+            color $white
+
+            transition background-color 150ms ease,
+                color 150ms ease
+
+
+            &:hover,&:active
+                background-color $white
+                color $black
+                p
+                    color $black
 
 .about-us
      // background-image url('//unsplash.it/2200/1200')
-
       .bio
         h2  color #eee
         background-color rgba(0, 0, 0, 0.8)
