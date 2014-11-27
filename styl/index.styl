@@ -1,4 +1,4 @@
-.our-work
+skew-it($align)
     .skew-me
         position relative
         z-index 1
@@ -11,15 +11,24 @@
 
         .skew-you
             background-color $black
-            transform(skewX(15deg))
             position absolute
             width 100%
             height 100%
             top 0
             z-index 10
 
-            right -20em
+            if $align == "left"
+                @media (min-width: $large)
+                    transform(skewX(15deg))
+                    left -20em
 
+            else if $align == "right"
+                @media (min-width: $large)
+                    transform(skewX(15deg))
+                    right -20em
+
+.our-work
+    skew-it("right")
 
     .current-gigs
         p
@@ -47,11 +56,14 @@
                     color $black
 
 .about-us
-     // background-image url('//unsplash.it/2200/1200')
-      .bio
-        h2  color #eee
+    skew-it("left")
+
+    .bio
         background-color rgba(0, 0, 0, 0.8)
         padding 1em
+
+        h2
+            color $white
 
 
 
