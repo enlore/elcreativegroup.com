@@ -19,7 +19,7 @@ skew-it($align)
 
             if $align == "left"
                 @media (min-width: $large)
-                    transform(skewX(15deg))
+                    transform(skewX(-15deg))
                     left -20em
 
             else if $align == "right"
@@ -27,19 +27,48 @@ skew-it($align)
                     transform(skewX(15deg))
                     right -20em
 
+.welcome
+    margin-top 5em
+    background-color $welcome-bg-fallback
+    background-color $welcome-bg
+    color $welcome-fg
+    padding 2em
+
+    h1
+        margin-top 0
+        letter-spacing 3px
+        font-size 30px
+        border-bottom 1px solid $white
+        .ampersand
+            font-size 25px
+
+
+        @media (min-width $tablet)
+            width 70%
+    h2
+        font-size 54px
+    p
+        font-size 20px
+
+    .red
+        color $the-word-you
+
 .our-work
     skew-it("right")
 
     .current-gigs
+        .copy
+            padding 1em
+
         p
             font-size 24px
             color $white
 
-        p.reveal
-            color $black
+        p.categories
+            color lighten($black, 25%)
+            font-size 20px
 
         a
-            padding 16px
             margin-top 1em
             display block
             background-color $black
@@ -50,10 +79,13 @@ skew-it($align)
 
 
             &:hover,&:active
-                background-color $white
-                color $black
-                p
-                    color $black
+                //background-color $white
+
+                button
+                    background-color $purple
+
+                p.categories
+                    color lighten($black, 25%)
 
 .about-us
     skew-it("left")
@@ -65,14 +97,10 @@ skew-it($align)
         h2
             color $white
 
-
-
 .services
-    h1
-        color $white
     background-color $black
+
     .wrap
-        background-image url('//unsplash.it/450/300')
         background-repeat no-repeat
         background-position center center
         margin-left auto

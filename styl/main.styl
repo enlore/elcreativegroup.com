@@ -2,6 +2,7 @@ $phone = 360px;
 $tablet = 768px;
 $medium = 992px;
 $large = 1200px;
+// 2200
 
 $black-alpha = rgba(0, 0, 0, 0.8);
 $nav-bg = $black-alpha;
@@ -34,7 +35,7 @@ $white = #eee
 $welcome-fg = $white
 $form-fg = $white
 $p-color = $white
-$section-head-color = $black
+$section-head-color = $white
 
 $red = #880000
 $hex-bg = $red
@@ -44,7 +45,6 @@ $form-error = $err-red
 
 $grey-blue = #3e4747
 $input-bg = $grey-blue
-
 
 $blue = #3dfffb
 $form-focus = $blue
@@ -96,9 +96,6 @@ body
         &.active
             border-top $border-nav-connection - 30px solid black
 
-
-
-
 .bg-wrap.index
     background-image url('/img/abstract-bg.jpg')
     background-color $black
@@ -117,14 +114,10 @@ center-abs($object-width)
 
 .logo
     transition(height 200ms ease)
-
     center-abs(127px)
-
     &.active
         height 45px
         center-abs(61px)
-
-
 
 .navbar-elcg
     background-color $nav-bg-fallback
@@ -144,9 +137,6 @@ center-abs($object-width)
             li > a
                 font-size 18px
 
-
-
-
     li > a
         engravers()
         text-align center
@@ -160,45 +150,15 @@ center-abs($object-width)
             border-bottom 1px solid $nav-hover-fg
 
 
-
-
 section
     padding-top 6em
     padding-bottom 6em
 
     h1
         color $section-head-color
-        padding-bottom 5px
         font-size 36px
-
-
 
 header
     position relative
-    padding-bottom 7em
+    padding-bottom 6em
 
-    .welcome
-        margin-top 5em
-        background-color $welcome-bg-fallback
-        background-color $welcome-bg
-        color $welcome-fg
-        padding 2em
-
-        h1
-            margin-top 0
-            letter-spacing 3px
-            font-size 30px
-            border-bottom 1px solid $white
-            .ampersand
-                font-size 25px
-
-
-            @media (min-width $tablet)
-                width 70%
-        h2
-            font-size 54px
-        p
-            font-size 20px
-
-        .red
-            color $the-word-you
