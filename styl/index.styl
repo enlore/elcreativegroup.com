@@ -75,7 +75,7 @@ skew-it($align)
             padding 1em
 
         p
-            font-size 24px
+            font-size 18px
             color $white
 
         p.categories
@@ -83,14 +83,19 @@ skew-it($align)
             font-size 20px
 
         a
-            border-bottom 4px solid $black
-
+            border-bottom 1em solid $black
+            &:last-child
+                border-bottom none
             display block
             background-color $black
             color $white
 
             transition background-color 150ms ease,
                 color 150ms ease
+
+            @media (min-width: $tablet)
+                img
+                    width 100%
 
 
             &:hover,&:active
