@@ -1,3 +1,17 @@
+mixin caseStudyBlock(href, imgSrc, title, tags)
+  a(href=href)
+    .row
+      .col-lg-6.col-lg-offset-0.col-sm-8.col-sm-offset-2
+        img.img-responsive(src=imgSrc)
+
+      .col-lg-6.col-lg-offset-0.col-sm-8.col-sm-offset-2
+        .copy
+          h2= title
+          p.categories= tags.join(" / ")
+          hr
+          block
+          button.reveal.btn-elcg.btn Click to see more&hellip;
+
 section#our-work.our-work
   .text-center
     .skew-me
@@ -6,119 +20,42 @@ section#our-work.our-work
 
   .container-fluid
     .current-gigs
-      a(href="")
-        .row
-          .col-lg-6
-            img.img-responsive(src="/img/index/kw_screen.jpg")
+      +caseStudyBlock("/", "/img/index/kw_screen.jpg", "The KW Report", ["Print Design", "Web Design"])
+        p.
+          We're building a high fashion media empire, one issue
+          at a time.
 
-          .col-lg-6
-            .copy
-              h2 The KW Report
-              p.categories Print Design / Web Design
-              hr
-              p.
-                We're building a high fashion media empire, one issue
-                at a time.
+      +caseStudyBlock("", "/img/index/eufd_screen.png", "Eyes Up, Forks Down", ["Web Design", "Branding", "Strategy"])
+        p.
+          We're laying the foundation for a profitable consulting business
+          for our client, Pat Woods.
 
-              button.reveal.btn-elcg.btn Click to see more&hellip;
+      +caseStudyBlock("", "/img/index/lees_screen.jpg", "Lee's Salon", ["Web Design", "Marketing"])
+        p.
+          Sometimes you just need a total redesign.
 
-      a(href="")
-        .row
-          .col-lg-6
-            img.img-responsive(src="/img/index/eufd_screen.png")
+      +caseStudyBlock("", "/img/index/kate_screen.png", "Kate Dyer for Judge", ["Web Design", "Marketing", "Strategy"])
+        p.
+          Social media is some of the cheapest, most efficient marketing
+          out there, second only to word of mouth.
 
-          .col-lg-6
-            .copy
-              h2 Eyes Up, Forks Down
-              p.categories Web Design / Branding / Strategy
-              hr
-              p.
-                We're laying the foundation for a profitable consulting business
-                for our client, Pat Woods.
+      +caseStudyBlock("", "/img/index/cafedelight_screen.png", "Cafe de Light", ["Web Design"])
+        p.
+          Nothing says "charming cafe" like animations of espresso
+          shots being pulled.
 
-              button.reveal.btn-elcg.btn Click to see more&hellip;
+      +caseStudyBlock("", "/img/index/tarboosh_screen.png", "Tarboosh Mediterranean Cuisine", ["Web Design"])
+        p.
+          You want take out orders over the phone? A tantalizing online
+          menu is how we get take out orders over the phone.
 
-      a(href="")
-        .row
-          .col-lg-6
-            img.img-responsive(src="/img/index/lees_screen.jpg")
-
-          .col-lg-6
-            .copy
-              h2 Lee's Salon
-              p.categories Web Design / Marketing
-              hr
-              p.
-                Sometimes you just need a total redesign.
-
-              button.reveal.btn-elcg.btn Click to see more&hellip;
-
-      a(href="")
-        .row
-          .col-lg-6
-            img.img-responsive(src="/img/index/kate_screen.png")
-
-          .col-lg-6
-            .copy
-              h2 Kate Dyer for Judge
-              p.categories Web Design / Marketing / Strategy
-              hr
-              p.
-                Social media is some of the cheapest, most efficient marketing
-                out there, second only to word of mouth.
-
-              button.reveal.btn-elcg.btn Click to see more&hellip;
-
-      a(href="")
-        .row
-          .col-lg-6
-            img.img-responsive(src="/img/index/cafedelight_screen.png")
-
-          .col-lg-6
-            .copy
-              h2 Cafe de Light
-              p.categories Web Design
-              hr
-              p.
-                Nothing says "charming cafe" like animations of espresso
-                shots being pulled.
-
-              button.reveal.btn-elcg.btn Click to see more&hellip;
-
-      a(href="")
-        .row
-          .col-lg-6
-            img.img-responsive(src="/img/index/tarboosh_screen.png")
-
-          .col-lg-6
-            .copy
-              h2 Tarboosh Mediterranean Food
-              p.categories Web Design
-              hr
-              p.
-                You want take out orders over the phone? A tantalizing online
-                menu is how we get take out orders over the phone.
-
-              button.reveal.btn-elcg.btn Click to see more&hellip;
-
-      a(href="")
-        .row
-          .col-lg-6
-            img.img-responsive(src="/img/index/ahlure_screen.png")
-
-          .col-lg-6
-            .copy
-              h2 DJ Ahlure
-              p.categories Web Design
-              hr
-              p.
-                If you build it (a beautiful marketing site for your DJ
-                skills), they will call.
-
-              button.reveal.btn-elcg.btn Click to see more&hellip;
+      +caseStudyBlock("", "/img/index/ahlure_screen.png", "DJ Ahlure", ["Web Design"])
+        p.
+          If you build it (a beautiful marketing site for your DJ
+          skills), they will call.
 
     .row
       .col-sm-12
-        h2
-          a(href="") There's more where that came from&hellip;
+        h2 Let's Get Together
+        a(href="") h3 Take the first step with our Project Planner
 
