@@ -57,6 +57,12 @@ skew-it($align)
     skew-it("right")
 
     .current-gigs
+        h2
+            font-size 32px
+
+        hr
+            border-top 1px solid lighten($black, 20%)
+
         .copy
             padding 1em
 
@@ -69,7 +75,11 @@ skew-it($align)
             font-size 20px
 
         a
-            margin-top 1em
+            border-bottom 2px solid $pink
+
+            &:nth-child(2)
+                border-bottom 2px solid $purple
+
             display block
             background-color $black
             color $white
@@ -80,9 +90,6 @@ skew-it($align)
 
             &:hover,&:active
                 //background-color $white
-
-                button
-                    background-color $purple
 
                 p.categories
                     color lighten($black, 25%)
