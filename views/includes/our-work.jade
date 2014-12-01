@@ -1,16 +1,4 @@
-mixin caseStudyBlock(href, imgSrc, title, tags)
-  a(href=href)
-    .row
-      .col-lg-6.col-lg-offset-0.col-sm-8.col-sm-offset-2
-        img.img-responsive(src=imgSrc)
-
-      .col-lg-6.col-lg-offset-0.col-sm-8.col-sm-offset-2
-        .copy
-          h2= title
-          p.categories= tags.join(" / ")
-          hr
-          block
-          button.reveal.btn-elcg.btn Click to see more&hellip;
+include caseStudyMixin
 
 section#our-work.our-work
   .text-center
@@ -33,26 +21,6 @@ section#our-work.our-work
       +caseStudyBlock("", "/img/index/lees_screen.jpg", "Lee's Salon", ["Web Design", "Marketing"])
         p.
           Sometimes you just need a total redesign.
-
-      +caseStudyBlock("", "/img/index/kate_screen.png", "Kate Dyer for Judge", ["Web Design", "Marketing", "Strategy"])
-        p.
-          Social media is some of the cheapest, most efficient marketing
-          out there, second only to word of mouth.
-
-      +caseStudyBlock("", "/img/index/cafedelight_screen.png", "Cafe de Light", ["Web Design"])
-        p.
-          Nothing says "charming cafe" like animations of espresso
-          shots being pulled.
-
-      +caseStudyBlock("", "/img/index/tarboosh_screen.png", "Tarboosh Mediterranean Cuisine", ["Web Design"])
-        p.
-          You want take out orders over the phone? A tantalizing online
-          menu is how we get take out orders over the phone.
-
-      +caseStudyBlock("", "/img/index/ahlure_screen.png", "DJ Ahlure", ["Web Design"])
-        p.
-          If you build it (a beautiful marketing site for your DJ
-          skills), they will call.
 
     .row
       .col-sm-12
