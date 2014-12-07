@@ -64,11 +64,17 @@ skew-it($align)
         max-width 2000px
         margin-left auto
         margin-right auto
+        height 100%
 
         .cta
-            position absolute
-            right 2em
-            bottom 2em
+            font-size 18px
+            position static
+            margin-left 20px
+            margin-bottom 10px
+            @media screen and (min-width: $large)
+                position absolute
+                bottom 1em
+                left 50%
 
 
         h2
@@ -89,6 +95,7 @@ skew-it($align)
             font-size 20px
 
         a.gig
+            min-height 100%
             position relative
             margin-bottom 1.5em
             &:last-child
@@ -100,9 +107,8 @@ skew-it($align)
             transition background-color 150ms ease,
                 color 150ms ease
 
-            @media (min-width: $tablet)
-                img
-                    width 100%
+            img
+                width 100%
 
 
             &:hover,&:active
