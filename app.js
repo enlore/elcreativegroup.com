@@ -7,6 +7,10 @@ var express     = require('express')
   , bodyParser  = require('body-parser')
   ;
 
+if (app.get("env") === "development" || app.get("env") === "debug") {
+    console.debug = console.log.bind(null, "##### _ >")
+}
+
 // dependencies
 var morgan      = require('morgan')
   ;
@@ -23,6 +27,7 @@ if (app.get('env') === 'development') {
 }
 
 app.use(express.static(path.join(__dirname, 'static')))
+
 app.use(morgan({
     format: 'dev',
     skip: function (req, res) {
@@ -41,6 +46,12 @@ app.get('/our-work', function (req, res) { res.render('our-work') })
 app.get('/our-work/kate-dyer-campaign', function (req, res) { res.render('kate-dyer-campaign') })
 
 app.get('/planner', function (req, res) { res.render('project-planner') })
+
+app.post('/planner', function (req, res) {
+    console.debug("In planner post")
+    console.debug(req.body)
+    res.redirect("/planner")
+})
 
 app.post('/contact-form', function (req, res) {
     console.log(req.body)
