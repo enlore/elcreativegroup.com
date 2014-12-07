@@ -64,44 +64,7 @@ $(document).ready(function (e) {
         }
 
         if (!hasErrors) {
-            var contactjqXHR = $.ajax('/contact-form', {
-                type: 'POST',
-                headers: {
-                    'X-CSRF-Token': $contactForm.find('[name="_csrf"]').val()
-                },
-                data: {
-                    humane_name : $contactForm.find('[name=human_name]').val(),
-                    phone       : $contactForm.find('[name=phone]').val(),
-                    email       : $contactForm.find('[name=email]').val(),
-                    message     : $contactForm.find('[name=message]').val()
-                }
-            })
-
-            contactjqXHR.done(function (data, stat, jqXHR) {
-                console.log(stat, data)
-                var $fields = $contactForm.find('input[type=text], textarea')
-
-                $fields.each(function (_, field) {
-                    $(field).val('')
-                })
-
-                $contactForm.find('h3').replaceWith('<h3 class="success">Thanks! We\'ll be in touch soon.</h3>')
-            })
-
-            contactjqXHR.fail(function (jqXHR, stat, err) {
-                // stat can be:
-                //  null
-                //  'timeout'
-                //  'error'
-                //  'abort'
-                //  'parseerror'
-
-                console.log(stat)
-
-                if (err) {
-                    console.log(err)
-                }
-            })
+            e.target.submit()
         }
     })
 })
