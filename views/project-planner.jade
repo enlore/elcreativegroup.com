@@ -7,26 +7,111 @@ block body
           h1 We'd love to work with you
           h2 Fill out our project planner and we'll be in touch in short order.
 
-          form#contact-form.project-planner(action="", method="post")
-            input(type="hidden", name="_csrf", value="boobs")
+          form#contact-form.project-planner(action="/project-planner", method="post")
+            input(type="hidden", name="_csrf", value="")
             input(type="hidden", name="hush")
 
-            .form-group
-              label(for="human_name") Name
-              input.form-control(type="text", name="human_name")
+            fieldset.personal-info
+              .row
+                .col-sm-12
+                  legend How can we conact you?
 
-            .form-group
-              label(for="email") Email
-              input.form-control(type="text", name="email")
+              .row
+                .form-group.col-sm-4
+                  label(for="human_name") Name
+                  input.form-control(type="text", name="human_name", placeholder="Your name here.")
 
-            .form-group
-              label(for="phone") Phone
-              input.form-control(type="text", name="phone")
+                .form-group.col-sm-4
+                  label(for="email") Email
+                  input.form-control(type="text", name="email", placeholder="No spam, we promise.")
 
-            .form-group
-              label(for="message") Description
-              textarea.form-control(name="message", rows=4)
+                .form-group.col-sm-4
+                  label(for="phone") Phone
+                  input.form-control(type="text", name="phone", placeholder="Area code, too, please.")
 
-            .form-group
-              button.btn.btn-elcg(type="submit") Get In Touch
+            fieldset.budget
+              .row
+                legend.col-sm-12 What's your budget?
+
+              .row
+                .form-group.col-sm-4
+                  label(for="budget")
+                    input.form-control(type="radio", name="budget", value="1")
+                    span  1k to 5k
+
+                .form-group.col-sm-4
+                  label(for="budget")
+                    input.form-control(type="radio", name="budget", value="2")
+                    span  5k to 10k
+
+                .form-group.col-sm-4
+                  label(for="budget")
+                    input.form-control(type="radio", name="budget", value="2")
+                    span  More than 10k
+
+            fieldset.description
+              .row
+                legend.col-sm-12 Can you give us a brief description of your project?
+
+              .row
+                .form-group.col-sm-12
+                  label(for="description") Description
+                  textarea.form-control(name="description",
+                  rows=4,
+                  placeholder="Let us know a few general details so we can have a better informed discussion.")
+
+            fieldset.service-requested
+              .row
+                .col-sm-12
+                  legend What do you need done?
+
+              .row
+                .form-group.col-sm-3
+                  label(for="web-design")
+                    input.form-control(type="checkbox", name="web-design", value="web-design")
+                    span  Web Design
+
+                .form-group.col-sm-3
+                  label(for="print-design")
+                    input.form-control(type="checkbox", name="print-design", value="print-design")
+                    span  Print Design
+
+                .form-group.col-sm-3
+                  label(for="social-media")
+                    input.form-control(type="checkbox", name="social-media", value="social-media")
+                    span  Social Media
+
+                .form-group.col-sm-3
+                  label(for="branding")
+                    input.form-control(type="checkbox", name="branding", value="branding")
+                    span  Branding
+
+
+            fieldset.start-done-date
+              .row
+                legend.col-sm-12 What's your ideal schedule like for this project?
+
+              .row
+                .form-group.col-sm-6
+                  label(for="start-date") Ideal Start Date
+                  input.form-control(type="date", name="start-date")
+
+                .form-group.col-sm-6
+                  label(for="done-date") Ideal Done Date
+                  input.form-control(type="date", name="done-date")
+
+            fieldset.project-goal
+              .row
+                legend.col-sm-12 What's your goal for this project?
+
+              .row
+                .form-group.col-sm-12
+                  label(for="project-goal") Project Goal
+                  textarea.form-control(name="project-goal",
+                  rows=2,
+                  placeholder="To sell more product? Maybe to make your publication successful? To raise awareness for your brand?")
+
+            .row
+              .form-group.col-sm-4
+                button.btn.btn-elcg(type="submit") Get In Touch
 
