@@ -1,9 +1,9 @@
 mixin bigButton(anchor, text)
   if anchor
-    button.btn.btn-elcg-lg(type="button", class=attributes.class)
+    button.btn.btn-elcg-lg(type="button", class=attributes.class, id=attributes.id)
       a(href=anchor)
         span= text
 
   else
-    button.btn.btn-elcg-lg(type="button")
+    button.btn.btn-elcg-lg(type="button", class=attributes.class, id=attributes.id)
       span= text

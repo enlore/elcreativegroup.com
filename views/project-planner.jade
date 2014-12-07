@@ -1,3 +1,5 @@
+include includes/bigButton
+
 extends layouts/base
 block body
   section.project-planner
@@ -7,7 +9,7 @@ block body
           h1 We'd love to work with you
           h2 Fill out our project planner and we'll be in touch in short order.
 
-          form#contact-form.project-planner(action="/project-planner", method="post")
+          form#contact-form.project-planner(action="/planner", method="post")
             input(type="hidden", name="_csrf", value="")
             input(type="hidden", name="hush")
 
@@ -111,7 +113,8 @@ block body
                   rows=2,
                   placeholder="To sell more product? Maybe to make your publication successful? To raise awareness for your brand?")
 
-            .row
-              .form-group.col-sm-4
-                button.btn.btn-elcg(type="submit") Get In Touch
-
+            fieldset
+              .row
+                .form-group.col-sm-4
+                  h3 All filled out?
+                  +bigButton(null, "All Finished")(id="submitButton")
