@@ -36,13 +36,11 @@ app.get('/', function (req, res) { res.render('index') })
 app.get('/about-us', function (req, res) { res.render('about') })
 app.get('/faq', function (req, res) { res.render('faq') })
 
-app.get('/our-work', function (req, res) {
-    res.render('our-work')
-})
+app.get('/our-work', function (req, res) { res.render('our-work') })
 
-app.get('/our-work/kate-dyer-campaign', function (req, res) {
-    res.render('kate-dyer-campaign')
-})
+app.get('/our-work/kate-dyer-campaign', function (req, res) { res.render('kate-dyer-campaign') })
+
+app.get('/planner', function (req, res) { res.render('project-planner') })
 
 app.post('/contact-form', function (req, res) {
     console.log(req.body)

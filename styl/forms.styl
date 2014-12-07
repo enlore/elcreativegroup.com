@@ -1,0 +1,27 @@
+input-box-shadow($in= transparent, $out = transparent)
+    -webkit-box-shadow inset 0 1px 1px $in,
+        0 0 8px $out
+    box-shadow inset 0 1px 1px $in,
+        0 0 8px $out
+
+form
+    input.form-control
+        height 28px
+
+    label
+        color $label-color
+
+    .form-control
+        background-color $input-bg
+        border-radius 0
+        border none
+        border-bottom 1px solid #666
+        font-size 16px
+        color $form-fg
+
+        &:focus
+            border-color transparent
+            border-bottom-color $form-focus
+            // no shadows on focus
+            input-box-shadow(transparent, transparent)
+

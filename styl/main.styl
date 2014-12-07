@@ -31,7 +31,7 @@ $grey = #efefef;
 
 $off-black = #424344
 
-$white = #eee
+$white = #fff
 $welcome-fg = $white
 $form-fg = $white
 $p-color = $white
@@ -60,10 +60,13 @@ $border-nav-connection = 119px
 @import 'util'
 @import 'footer'
 @import 'hexes'
+@import 'forms'
 
 // Pages
-@import 'index'
+@import 'pages/index'
 @import 'dyer'
+@import 'pages/project-planner'
+@import 'pages/our-work'
 
 .masque.active
     background-image url('/img/logo_nav.png')
@@ -134,17 +137,17 @@ center-abs($object-width)
         &.active
             height $border-nav-connection - 50px
 
-            li > a
+            .nav > li > a
                 font-size 18px
 
-    li > a
+    .nav > li > a
         engravers()
         text-align center
         font-size 22px
         letter-spacing 3px
         color $white
         transition(font-size 200ms ease)
-        &active, &hover
+        &:active, &:hover
             background-color transparent
             color $nav-hover-fg
             border-bottom 1px solid $nav-hover-fg
@@ -156,7 +159,7 @@ section
 
     h1
         color $section-head-color
-        font-size 36px
+        font-size 42px
         margin-bottom 3rem
 
 header

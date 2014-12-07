@@ -1,0 +1,172 @@
+skew-it($align)
+    .skew-me
+        position relative
+        z-index 1
+
+        h1
+            color $white
+            z-index 100
+            padding 0.5em
+            position relative
+
+        .skew-you
+            background-color $black
+            position absolute
+            width 100%
+            height 100%
+            top 0
+            z-index 10
+
+            if $align == "left"
+                @media (min-width: $large)
+                    transform(skewX(-15deg))
+                    left -20em
+
+            else if $align == "right"
+                @media (min-width: $large)
+                    transform(skewX(15deg))
+                    right -20em
+
+.welcome
+    margin-top 5em
+    background-color $welcome-bg-fallback
+    background-color $welcome-bg
+    color $welcome-fg
+    padding 2em
+
+    h1
+        margin-top 0
+        letter-spacing 3px
+        font-size 30px
+        border-bottom 1px solid $white
+        .ampersand
+            font-size 25px
+
+
+        @media (min-width $tablet)
+            width 70%
+    h2
+        font-size 54px
+    p
+        font-size 20px
+
+    .red
+        color $the-word-you
+
+.our-work
+    skew-it("right")
+
+    .container-fluid
+        padding-left 0
+        padding-right 0
+
+    .current-gigs
+        max-width 2000px
+        margin-left auto
+        margin-right auto
+
+        .cta
+            position absolute
+            right 2em
+            bottom 2em
+
+
+        h2
+            font-size 32px
+
+        hr
+            border-top 1px solid lighten($black, 20%)
+
+        .copy
+            padding 1em
+
+        p
+            font-size 18px
+            color $white
+
+        p.categories
+            color lighten($black, 25%)
+            font-size 20px
+
+        a.gig
+            position relative
+            margin-bottom 1.5em
+            &:last-child
+                border-bottom none
+            display block
+            background-color $black
+            color $white
+
+            transition background-color 150ms ease,
+                color 150ms ease
+
+            @media (min-width: $tablet)
+                img
+                    width 100%
+
+
+            &:hover,&:active
+                //background-color $white
+
+                p.categories
+                    color lighten($black, 25%)
+
+
+.how-we-work
+    skew-it("left")
+
+.about-us
+    skew-it("left")
+
+    .bio
+        background-color rgba(0, 0, 0, 0.8)
+        padding 1em
+
+        h2
+            color $white
+
+.services
+    background-color $black
+
+    .wrap
+        background-repeat no-repeat
+        background-position center center
+        margin-left auto
+        margin-right auto
+        width 500px
+        height 341px
+        margin-bottom 30px
+        line-height 30px
+
+    h2
+        text-align center
+        font-size 30px
+        border-bottom none
+        color white
+
+    .wrap.web-design
+        //background-image url("/img/web_design.svg")
+        background-image url("/img/services_sheet.png")
+        background-position 0 0
+
+    .wrap.print-media
+        //background-image url("/img/print_media.svg")
+        background-image url("/img/services_sheet.png")
+        background-position -504px 0
+
+    .wrap.branding
+        //background-image url("/img/branding.svg")
+        background-image url("/img/services_sheet.png")
+        background-position 0px -343px
+
+    .wrap.social-media
+        //background-image url("/img/social_media.svg")
+        background-image url("/img/services_sheet.png")
+        background-position -504px -343px
+
+.angle-border
+    background-image url('/img/angle_border.png')
+    background-position center 0px
+    background-repeat no-repeat
+    height 71px
+

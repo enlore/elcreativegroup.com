@@ -1,0 +1,32 @@
+extends layouts/base
+block body
+  section.project-planner
+    .container
+      .row
+        .col-sm-8.col-sm-offset-2
+          h1 We'd love to work with you
+          h2 Fill out our project planner and we'll be in touch in short order.
+
+          form#contact-form.project-planner(action="", method="post")
+            input(type="hidden", name="_csrf", value="boobs")
+            input(type="hidden", name="hush")
+
+            .form-group
+              label(for="human_name") Name
+              input.form-control(type="text", name="human_name")
+
+            .form-group
+              label(for="email") Email
+              input.form-control(type="text", name="email")
+
+            .form-group
+              label(for="phone") Phone
+              input.form-control(type="text", name="phone")
+
+            .form-group
+              label(for="message") Description
+              textarea.form-control(name="message", rows=4)
+
+            .form-group
+              button.btn.btn-elcg(type="submit") Get In Touch
+

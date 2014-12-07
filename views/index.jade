@@ -1,3 +1,5 @@
+include includes/bigButton
+
 extends layouts/base
 block body
   .bg-wrap.index(data-start="background-position: -100px -200px;", data-end="background-position: -400px -700px;")
@@ -29,72 +31,8 @@ block body
 
     include includes/our-work
 
-    section.about-us
-      .text-center
-        .skew-me
-          .skew-you
-          h1 Who We Are
+    include includes/project-planner-cta
 
-      .container
-        .row
-          .col-sm-6.alex
-            .bio
-              h2.text-center W.A. Elliott
-              p.
-                Alexander has been a resident of Clarksville, TN for over 20
-                years. His strong background in graphic design and advertising
-                has spanned over 10 years. A graduate of Austin Peay State
-                University, he has a degree in marketing. During college, he
-                started designing logos and business cards for friends, which
-                eventually led to the formation of W. Alexander Designs, his
-                own independent graphics venture. He also began to expand into
-                print media, which cultivated into an award-winning term as a
-                writer and Advertising Manager for APSU’s student newspaper.
-                These successes translated into a great opportunity for him to
-                move to New York City, where he became an Advertising Executive
-                for Village Voice Media, LLC. He ran into Nick when he returned
-                to Clarksville; a synergy was created, and a new journey
-                began!
+    include includes/how-we-work
 
-              p.
-                When he’s not designing, you can catch Alexander
-                hosting/performing parties as <a href="http://ahlure.net">DJ Ahlure</a>,
-                rock climbing, or out at a myriad of social events in the mid-south.
-
-          .col-sm-6.nick
-            .bio
-              h2.text-center N.E. Lorenson
-              p.
-                As an exiled son of Mars, Nick has spent his time on Earth
-                studying application and UX design, programming, SEO, and the
-                inner workings of the Internet.  Deep down, he’s a decent guy
-                that dreams of one day returning home to be among his people.
-                Until then, he builds websites, brainstorms interesting
-                solutions for your problems, and spends his free time riding
-                his bicycle around town.  Such is the life of a magic man.
-
-
-    .angle-border
-    section.services
-      .container
-        .row
-          .col-sm-12.text-center
-            h1 Our Services
-
-        .row
-          .col-sm-6
-            .wrap.web-design
-              h2 Web Design and Development
-
-          .col-sm-6
-            .wrap.branding
-              h2 Branding
-
-        .row
-          .col-sm-6
-            .wrap.social-media
-              h2 Social Media Marketing
-
-          .col-sm-6
-            .wrap.print-media
-              h2 Print Media Design
+    include includes/our-services
