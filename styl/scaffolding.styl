@@ -22,7 +22,7 @@
     font-family: 'Engravers Gothic', Helvetica, sans-serif;
 
 
-.myriad, a, p, span, li, h4, h5, h6, .h4, .h5, .h6, label, button
+.myriad, a, p, span, li, h4, h5, h6, .h4, .h5, .h6, label, button, legend
     font-family: 'MyriadPro', Arial, sans-serif;
 
 a
@@ -52,7 +52,16 @@ $span-active-bg = $blue
     display block
     border-radius 0
     background-color transparent
-    font-size 46px
+    font-size 18px
+
+    @media (min-width: 600px)
+        font-size 30px
+
+    @media (min-width: $tablet)
+        font-size 36px
+
+    @media (min-width: $medium)
+        font-size 46px
 
     a
         text-decoration none
