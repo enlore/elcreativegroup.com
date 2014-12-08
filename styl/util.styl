@@ -1,11 +1,11 @@
-ul li { list-style: none; }
+ul li
+    list-style none
 
-.center-abs {
-    position: absolute;
-    left: 50%;
-    right: 50%;
-    margin-left: -44.5px;
-}
+center-abs($object-width)
+    position absolute
+    left 50%
+    right 50%
+    margin-left (-($object-width / 2))
 
 // pass a string
 transform($func)
@@ -15,20 +15,15 @@ transform($func)
     -o-transform $func
     transform $func
 
-.has-error {
-    .form-control {
-        border-color: #a94442;
-    }
-    label {
-        color: $form-error;
-    }
-}
+.has-error
+    .form-control
+        border-color #a94442
 
-.success {
-    color: $form-success;
-}
+    label
+        color $form-error
 
-.spaced-out {
-    letter-spacing: 7px;
-}
+.success
+    color $form-success
 
+.spaced-out
+    letter-spacing 7px
