@@ -121,6 +121,39 @@ skew-it($align)
 .how-we-work
     skew-it("left")
 
+    ol
+        list-style none
+        margin-top 4em
+        margin-bottom 4em
+
+    .work-step
+        text-align center
+        background-color $black-alpha
+        color white
+        engravers()
+
+        transition transform 200ms ease
+
+        &:hover
+            transform scale(1.08)
+
+        h2
+            background-color black
+            font-size 32px
+            padding 0.5em 1em
+            margin-bottom 0
+
+        p
+            padding 0.5em
+            min-height 120px
+            font-size 20px
+
+            font-family inherit
+
+            @media (min-width: $tablet)
+                min-height 95px
+
+
 .about-us
     skew-it("left")
 
