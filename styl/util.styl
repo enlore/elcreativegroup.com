@@ -1,11 +1,24 @@
-ul li
-    list-style none
+
+vertical-align()
+    position relative
+    top 50%
+    -webkit-transform translateY(-50%)
+    -moz-transform translateY(-50%)
+    transform translateY(-50%)
+
 
 center-abs($object-width)
     position absolute
     left 50%
     right 50%
     margin-left (-($object-width / 2))
+
+center-2d($w, $h)
+    position absolute
+    left 50%
+    top 50%
+    margin-left (-($w / 2))
+    margin-top (-($h / 2))
 
 // pass a string
 transform($func)

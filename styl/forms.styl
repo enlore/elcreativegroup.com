@@ -1,3 +1,5 @@
+$input-bg = $black
+
 input-box-shadow($in= transparent, $out = transparent)
     -webkit-box-shadow inset 0 1px 1px $in,
         0 0 8px $out
@@ -7,9 +9,6 @@ input-box-shadow($in= transparent, $out = transparent)
 form
     input.form-control
         height 28px
-
-    label
-        color $label-color
 
     fieldset
         @media screen and (min-width: $tablet)
@@ -32,6 +31,76 @@ form
             // no shadows on focus
             input-box-shadow(transparent, transparent)
 
+form#project-planner
+    legend
+        font-size 26px
+
+    input[type="text"], textarea
+        line-height 20px
+        font-size 20px
+        padding 1em
+
+    input[type="text"]
+
+    // Sections
+    .service-requested
+        .form-control[type="checkbox"]
+            display none
+
+        label
+            margin-left auto
+            margin-right auto
+            display block
+            padding 1em
+            border 2px solid black
+            position relative
+
+        .control
+            height 160px
+            position relative
+            background-color black
+            -webkit-transform-style preserve-3d
+            -moz-transform-style preserve-3d
+            transform-style preserve-3d
+
+        span
+            text-align center
+            display block
+            font-size 26px
+            color white
+
+            vertical-align()
+
+    .budget
+        .form-control[type="radio"]
+            display none
+
+        label
+            margin-left auto
+            margin-right auto
+            display block
+            padding 0.6em 0.6em
+            border 2px solid $black
+
+        span
+            background-color $black
+            padding 0.5em 1em
+            min-width 100px
+            display block
+            text-align center
+            transition color 200ms ease
+            color white
+
+            &.active
+                color blue
+
+     .start-done-date
+         .form-control[type="date"]
+            font-size 20px
+            padding 0.9em
+            display block
+
     button#submitButton
         margin-top 1em
-        font-size 22px !important
+        font-size 24px !important
+

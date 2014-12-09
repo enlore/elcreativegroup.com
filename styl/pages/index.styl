@@ -125,6 +125,7 @@ skew-it($align)
         list-style none
         margin-top 4em
         margin-bottom 4em
+        padding-left 0
 
     .work-step
         text-align center
@@ -167,21 +168,42 @@ skew-it($align)
 .services
     background-color $black
 
-    .wrap
-        background-repeat no-repeat
-        background-position center center
-        margin-left auto
-        margin-right auto
-        width 500px
-        height 341px
-        margin-bottom 30px
-        line-height 30px
-
     h2
         text-align center
         font-size 30px
         border-bottom none
         color white
+
+    .wrap
+        background-repeat no-repeat
+        background-position center center
+        margin-left auto
+        margin-right auto
+        margin-bottom 30px
+        line-height 30px
+        position relative
+        max-width 100%
+
+        $wrap-width = 310px
+        $wrap-height = 226px
+
+        width $wrap-width
+        height $wrap-height
+
+        @media (min-width: $tablet)
+            width $wrap-width * 1.412
+            height $wrap-height * 1.412
+
+        img
+            width $wrap-width * 0.9
+            height $wrap-height * 0.9
+            center-2d($wrap-width * 0.9, $wrap-height * 0.9)
+
+            @media (min-width: $tablet)
+                width $wrap-width * 1.271
+                height $wrap-height * 1.271
+                center-2d($wrap-width * 1.271, $wrap-height * 1.271)
+
 
     .wrap.web-design
         //background-image url("/img/web_design.svg")
