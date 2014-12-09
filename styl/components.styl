@@ -4,7 +4,7 @@ $btn-hover-bg = $peach-skin
 $span-active-bg = $peach-skin
 
 .btn-elcg-lg
-    border 3px solid $btn-black
+    border 2px solid $btn-black
     padding 0.5em
     display block
     border-radius 0
@@ -32,15 +32,18 @@ $span-active-bg = $peach-skin
 
     &:hover
         span
-            color $btn-hover-bg
+            color $btn-white
         background-color $btn-hover-bg
+        background-image url("/img/launch_bg.jpg")
 
     &:active
         background-color transparent
+        background-image none
 
         span
-            color $btn-black
+            color $btn-white
             background-color $span-active-bg
+            background-image url("/img/launch_bg.jpg")
             border 3px solid $btn-black
 
 

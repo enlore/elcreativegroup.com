@@ -4,8 +4,26 @@ extends layouts/base
 block body
   .bg-wrap.our-work
     section.our-work
+      .container
+        .row
+          .col-sm-12.text-center
+            h1 A Selection of Our Work
+            h2 Peruse some of our past projects
+
       .container-fluid
         .current-gigs
+          +caseStudyBlock("", "/img/riverside_chiro_splash.png", "Riverside Chiropractic", ["Branding", "Print Media Design"])
+            p.
+              The logo is always the first step in a total rebranding process.
+
+          +caseStudyBlock("", "/img/rrs_splash.png", "The Red River Sirens", ["Web Design"])
+            p.
+              We took their web site from zero to generating a constant stream of new recruitment.
+
+          +caseStudyBlock("", "/img/big_fish_splash.png", "Big Fish Limos", ["Web Design"])
+            p.
+              Making a great first impression is everything in the luxury business.
+
           +caseStudyBlock("/", "/img/index/kw_screen.jpg", "The KW Report", ["Print Design", "Web Design"])
             p.
               We're building a high fashion media empire, one issue
@@ -39,41 +57,3 @@ block body
             p.
               If you build it (a beautiful marketing site for your DJ
               skills), they will call.
-
-      .container
-        .row
-          .col-sm-12
-            h1 Our Work
-            ul
-              li
-                a() Eyes Up, Forks Down
-
-              li
-                a() Lee's Salon
-
-              li
-                a() Big Fish Limos
-
-              li
-                a(href="/our-work/kate-dyer-campaign") The Campaign to Get Kate Dyer Elected
-
-              li
-                a() Riverside Spine and Wellness
-
-              li
-                a(href="") The KW Report
-
-              li
-                a() The Red River Sirens
-
-              li
-                a() Lady Bug Bridal
-
-              li
-                a() Cafe de Light
-
-              li
-                a() Tarboosh Mediterranean Quisine
-
-              li
-                a() DJ Ahlure

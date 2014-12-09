@@ -4,8 +4,7 @@ $medium = 992px;
 $large = 1200px;
 // 2200
 
-$black-alpha = rgba(0, 0, 0, 0.8);
-$nav-bg = $black-alpha;
+$black-alpha = rgba(0, 0, 0, 0.8); $nav-bg = $black-alpha;
 $welcome-bg = $black-alpha;
 $bio-bg = $black-alpha;
 $case-study-link-bg = $black-alpha;
@@ -69,6 +68,7 @@ $border-nav-connection = 119px
 @import 'dyer'
 @import 'pages/project-planner'
 @import 'pages/our-work'
+@import 'pages/about-us'
 
 .masque.active
     background-image url('/img/logo_nav.png')
@@ -105,8 +105,8 @@ body
     background-image url('/img/abstract-bg.jpg')
     background-color $black
     //background-size cover
-    background-position center -235px
-    background-repeat no-repeat
+    //background-position center -235px
+    //background-repeat no-repeat
     background-attachment fixed
 
 .logo
@@ -145,3 +145,9 @@ body
             background-color transparent
             color $nav-hover-fg
             border-bottom 1px solid $nav-hover-fg
+
+blockquote
+    padding 0 10px
+    border-left 2px solid $white
+    cite
+        font-size 22px

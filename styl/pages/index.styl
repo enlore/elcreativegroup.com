@@ -117,6 +117,22 @@ skew-it($align)
                 p.categories
                     color lighten($black, 25%)
 
+.project-planner-cta
+    h1, h2
+        text-transform lowercase
+
+    .lead
+        font-size 28px
+        margin-top 20px
+
+    .wrap-wrap
+        padding 1em
+        border 2px solid $black
+
+    .wrap
+        background-color $black-alpha
+        padding 2em
+
 
 .how-we-work
     skew-it("left")
@@ -131,7 +147,6 @@ skew-it($align)
         text-align center
         background-color $black-alpha
         color white
-        engravers()
 
         transition transform 200ms ease
 
@@ -140,20 +155,23 @@ skew-it($align)
 
         h2
             background-color black
-            font-size 32px
+            font-size 38px
             padding 0.5em 1em
             margin-bottom 0
+            text-transform lowercase
+
+            .ampersand
+                font-size 26px
 
         p
-            padding 0.5em
+            padding 0.8em
             min-height 120px
-            font-size 20px
+            font-size 24px
 
             font-family inherit
 
             @media (min-width: $tablet)
                 min-height 95px
-
 
 .about-us
     skew-it("left")

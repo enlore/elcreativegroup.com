@@ -1,5 +1,5 @@
 $(document).ready(function (e) {
-    skrollr.init({forceHeight: false})
+    //skrollr.init({forceHeight: false})
 
     /*
      * Navbar squeeze
