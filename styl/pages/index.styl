@@ -133,6 +133,27 @@ skew-it($align)
         background-color $black-alpha
         padding 2em
 
+    .btn-elcg-lg
+        span
+            background-color $btn-black
+            color $btn-white
+            padding 0.5em 2em
+
+        &:hover
+            span
+                color $btn-white
+            background-color $btn-hover-bg
+            background-image url("/img/launch_bg.jpg")
+
+        &:active
+            background-color transparent
+            background-image none
+
+            span
+                color $btn-white
+                background-color $span-active-bg
+                background-image url("/img/launch_bg.jpg")
+
 
 .how-we-work
     skew-it("left")
