@@ -200,9 +200,10 @@ skew-it($align)
             center-2d($wrap-width * 0.9, $wrap-height * 0.9)
 
             @media (min-width: $tablet)
-                width $wrap-width * 1.271
-                height $wrap-height * 1.271
-                center-2d($wrap-width * 1.271, $wrap-height * 1.271)
+                $tab-const = 1.371
+                width $wrap-width * $tab-const
+                height $wrap-height * $tab-const
+                center-2d($wrap-width * $tab-const, $wrap-height * $tab-const)
 
 
     .wrap.web-design
