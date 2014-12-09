@@ -67,4 +67,18 @@ $(document).ready(function (e) {
             e.target.submit()
         }
     })
+
+    /*
+     * Project planner interactions
+     * ****************************/
+
+    var $projectPlanner = $('#project-planner')
+    $projectPlanner.delegate('.budget label', 'click', function (e) {
+        console.log(e.target, " clicked")
+        $(e.target).find('span').toggleClass("active")
+    })
+
+    $projectPlanner.delegate('.budget label span', 'click', function (e) {
+        $(e.target).toggleClass('active')
+    })
 })
