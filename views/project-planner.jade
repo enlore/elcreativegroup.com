@@ -6,17 +6,17 @@ block body
     section
       .container
         .row
-          .col-sm-8.col-sm-offset-2
+          .col-sm-8.col-sm-offset-2.text-center
             h1 We'd love to work with you
             h2 Fill out our project planner and we'll be in touch in short order.
 
-            form#contact-form.project-planner(action="/planner", method="post")
+            form#project-planner.project-planner(action="/planner", method="post")
               input(type="hidden", name="_csrf", value="")
               input(type="hidden", name="hush")
 
               fieldset.personal-info
                 .row
-                  .col-sm-12
+                  .col-sm-12.text-center
                     legend How can we conact you?
 
                 .row
@@ -34,65 +34,77 @@ block body
 
               fieldset.budget
                 .row
-                  legend.col-sm-12 What's your budget?
+                  .col-sm-12.text-center
+                    legend What is your budget?
 
                 .row
-                  .form-group.col-sm-4
+                  .form-group.col-sm-3
                     label(for="budget")
                       input.form-control(type="radio", name="budget", value="1")
-                      span  1k to 5k
+                      span.control $1,000 to $2,500
 
-                  .form-group.col-sm-4
+                  .form-group.col-sm-3
+                    label(for="budget")
+                      input.form-control(type="radio", name="budget", value="1")
+                      span.control $2,500 to $5,000
+
+                  .form-group.col-sm-3
                     label(for="budget")
                       input.form-control(type="radio", name="budget", value="2")
-                      span  5k to 10k
+                      span.control $5,000 to $10,000
 
-                  .form-group.col-sm-4
+                  .form-group.col-sm-3
                     label(for="budget")
                       input.form-control(type="radio", name="budget", value="2")
-                      span  More than 10k
+                      span.control $10,000+
 
               fieldset.description
                 .row
-                  legend.col-sm-12 Can you give us a brief description of your project?
+                  .col-sm-12.text-center
+                    legend Briefly describe your project.
 
                 .row
                   .form-group.col-sm-12
-                    label(for="description") Description
+                    label.sr-only(for="description") Description
                     textarea.form-control(name="description",
                     rows=4,
                     placeholder="Let us know a few general details so we can have a better informed discussion.")
 
               fieldset.service-requested
                 .row
-                  .col-sm-12
-                    legend What do you need done?
+                  .col-sm-12.text-center
+                    legend What services do you need? (Check all that apply.)
 
                 .row
-                  .form-group.col-sm-3
+                  .form-group.col-sm-6
                     label(for="web-design")
                       input.form-control(type="checkbox", name="web-design", value="web-design")
-                      span  Web Design
+                      .control
+                        span  Web Design <br> and Development
 
-                  .form-group.col-sm-3
+                  .form-group.col-sm-6
                     label(for="print-design")
                       input.form-control(type="checkbox", name="print-design", value="print-design")
-                      span  Print Design
+                      .control
+                        span  Print Media Design
 
-                  .form-group.col-sm-3
+                .row
+                  .form-group.col-sm-6
                     label(for="social-media")
-                      input.form-control(type="checkbox", name="social-media", value="social-media")
-                      span  Social Media
+                      input#social-media-checkbox.form-control(type="checkbox", name="social-media", value="social-media")
+                      .control(data-elcg-planner-input="#social-media-checkbox")
+                        span  Social Media Marketing
 
-                  .form-group.col-sm-3
+                  .form-group.col-sm-6
                     label(for="branding")
-                      input.form-control(type="checkbox", name="branding", value="branding")
-                      span  Branding
+                      input#branding-checkbox.form-control(type="checkbox", name="branding", value="branding")
+                      .control(data-elcg-planner-input="#branding-checkbox")
+                        span  Branding
 
 
               fieldset.start-done-date
                 .row
-                  legend.col-sm-12 What's your ideal schedule like for this project?
+                  legend.col-sm-12 What's your ideal schedule for this project?
 
                 .row
                   .form-group.col-sm-6
@@ -109,13 +121,13 @@ block body
 
                 .row
                   .form-group.col-sm-12
-                    label(for="project-goal") Project Goal
+                    label.sr-only(for="project-goal") Project Goal
                     textarea.form-control(name="project-goal",
                     rows=2,
                     placeholder="To sell more product? Maybe to make your publication successful? To raise awareness for your brand?")
 
               fieldset
                 .row
-                  .form-group.col-sm-4
+                  .form-group.col-sm-12.text-center
                     h3 All filled out?
-                    +bigButton(null, "All Finished")(id="submitButton")
+                    +bigButton(null, "All Finished")(id="submitButton", class="center-block")
