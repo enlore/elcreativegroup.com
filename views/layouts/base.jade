@@ -20,7 +20,7 @@ html
     script(type="application/javascript", src="/js/vendor/respond.min.js")
 
   body()
-    .masque
+    #masque.active
 
     include includes/nav
     #skrollr-body
@@ -28,6 +28,14 @@ html
       include includes/footer
 
     script(type="text/javascript", src="/js/vendor/jquery-2.1.0.min.js")
+    script.
+      $(window).load(function (e) {
+        $('#masque').fadeOut(600, function () {
+            $('#masque').removeClass('active')
+        })
+        console.log("timer")
+      })
+
     script(type="text/javascript", src="/js/vendor/bootstrap.min.js")
     script(type="text/javascript", src="/js/vendor/skrollr.min.js")
     script(type="text/javascript", src="/js/main.js")

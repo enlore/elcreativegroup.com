@@ -1,4 +1,5 @@
 $(document).ready(function (e) {
+
     //skrollr.init({forceHeight: false})
 
     /*
@@ -18,16 +19,6 @@ $(document).ready(function (e) {
             $logo.removeClass('active')
         }
     })
-
-    /*
-     * Loading masque
-     * ****************************/
-    setTimeout(function () {
-        console.log('timeout fun')
-        $('.masque').fadeOut(600, function () {
-            $('.masque').removeClass('active')
-        })
-    }, 2000)
 
     /*
      * Contact form validation
@@ -73,6 +64,7 @@ $(document).ready(function (e) {
      * ****************************/
 
     var $projectPlanner = $('#project-planner')
+
     $projectPlanner.delegate('.budget label', 'click', function (e) {
         console.log(e.target, " clicked")
         $(e.target).find('span').toggleClass("active")

@@ -43,34 +43,6 @@ form#project-planner
         padding 1em
 
     // Sections
-    .service-requested
-        .form-control[type="checkbox"]
-            display none
-
-        label
-            margin-left auto
-            margin-right auto
-            display block
-            padding 1em
-            border 2px solid black
-            position relative
-
-        .control
-            height 120px
-            position relative
-            background-color black
-            -webkit-transform-style preserve-3d
-            -moz-transform-style preserve-3d
-            transform-style preserve-3d
-
-        span
-            text-align center
-            display block
-            font-size 26px
-            color white
-
-            vertical-align()
-
     .budget
         .form-control[type="radio"]
             display none
@@ -81,16 +53,71 @@ form#project-planner
             display block
             padding 0.6em 0.6em
             border 2px solid $black
+            transition transform 200ms ease
 
-        span
+        span.control
             background-color $black
             padding 0.5em 1em
             min-width 100px
             display block
             text-align center
-            transition color 200ms ease
             font-size 16px
             color white
+            transition color 200ms ease
+
+        #budget-1,
+        #budget-2,
+        #budget-3,
+        #budget-4
+            label.active
+                transform scale(1.05)
+
+            .control.active
+                color $budget-active-color
+
+
+    .service-requested
+        .form-control[type="checkbox"]
+            display none
+
+        #web-design-control,
+        #print-design-control,
+        #social-media-control,
+        #branding-control
+            padding 1em
+
+            .control
+                height 120px
+                position relative
+                background-color black
+                background-image url("/img/tablet_hand.png")
+                background-position -100000px -100000px
+                background-repeat no-repeat
+
+                &.active
+                    background-position -110px -90px
+
+        label
+            margin-left auto
+            margin-right auto
+            display block
+            padding 1em
+            border 2px solid black
+
+            transition transform 50ms ease-in-out
+
+            &.active
+                transform scale(1.05)
+
+        span
+            text-align center
+            display block
+            font-size 26px
+            color white
+
+            vertical-align()
+
+            transition color 50ms ease-in-out
 
             &.active
                 color blue

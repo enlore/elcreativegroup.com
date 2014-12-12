@@ -46,7 +46,7 @@ skew-it($align)
         @media (min-width $tablet)
             width 70%
     h2
-        font-size 54px
+        font-size 56px
     p
         font-size 20px
 
@@ -95,6 +95,8 @@ skew-it($align)
             font-size 20px
 
         a.gig
+            h2
+                margin-bottom 20px
             min-height 100%
             position relative
             margin-bottom 1.5em
@@ -121,8 +123,21 @@ skew-it($align)
     h1, h2
         text-transform lowercase
 
+    h1
+        font-size 26px
+        @media (min-width: 500px)
+            font-size 36px
+
+        @media (min-width: 600px)
+            font-size 40px
+
+        @media (min-width: $tablet)
+            font-size 54px
+
+
+
     .lead
-        font-size 28px
+        font-size 24px
         margin-top 20px
 
     .wrap-wrap
@@ -134,16 +149,32 @@ skew-it($align)
         padding 2em
 
     .btn-elcg-lg
+        font-size 16px
+        border 2px solid $blue
+
+        @media (min-width: 400px)
+            font-size 24px
+
+        @media (min-width: $tablet)
+            font-size 36px
+
+        @media (min-width: $medium)
+            font-size 42px
+
         span
             background-color $btn-black
-            color $btn-white
-            padding 0.5em 2em
+            color $blue
+            padding 0.5em
+
+            @media (min-width: 600px)
+                padding 0.5em 2em
+
 
         &:hover
             span
                 color $btn-white
+
             background-color $btn-hover-bg
-            background-image url("/img/launch_bg.jpg")
 
         &:active
             background-color transparent
@@ -152,8 +183,11 @@ skew-it($align)
             span
                 color $btn-white
                 background-color $span-active-bg
-                background-image url("/img/launch_bg.jpg")
 
+        span.clean
+            padding 0
+            border none
+            display inline
 
 .how-we-work
     skew-it("left")
@@ -223,8 +257,8 @@ skew-it($align)
         position relative
         max-width 100%
 
-        $wrap-width = 310px
-        $wrap-height = 226px
+        $wrap-width = 328px
+        $wrap-height = 220px
 
         width $wrap-width
         height $wrap-height
@@ -239,7 +273,7 @@ skew-it($align)
             center-2d($wrap-width * 0.9, $wrap-height * 0.9)
 
             @media (min-width: $tablet)
-                $tab-const = 1.371
+                $tab-const = 1.39
                 width $wrap-width * $tab-const
                 height $wrap-height * $tab-const
                 center-2d($wrap-width * $tab-const, $wrap-height * $tab-const)
@@ -266,8 +300,7 @@ skew-it($align)
         background-position -504px -343px
 
 .angle-border
-    background-image url('/img/angle_border.png')
-    background-position center 0px
-    background-repeat no-repeat
-    height 71px
+    //height 71px
+    img
+        width 102%
 
