@@ -1,10 +1,10 @@
 mixin caseStudyBlock(href, imgSrc, title, tags)
   a.gig(href=href)
     .row
-      .col-lg-6
+      .col-md-6
         img.img-responsive(src=imgSrc)
 
-      .col-lg-6
+      .col-md-6
         .copy
           h2= title
           p.categories= tags.join(" / ")
