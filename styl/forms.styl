@@ -90,12 +90,22 @@ form#project-planner
                 height 120px
                 position relative
                 background-color black
-                background-image url("/img/tablet_hand.png")
                 background-position -100000px -100000px
                 background-repeat no-repeat
+                background-image url("/img/pp_services_sheet.png")
 
-                &.active
-                    background-position -110px -90px
+        #web-design-control .control.active
+            background-position 0px 0px
+
+        #print-design-control .control.active
+            background-position -429px -122px
+
+        #social-media-control .control.active
+            background-position 0px -122px
+
+        #branding-control .control.active
+            background-position -429px 0px
+
 
         label
             margin-left auto
@@ -120,7 +130,7 @@ form#project-planner
             transition color 50ms ease-in-out
 
             &.active
-                color blue
+                color $service-active-color
 
      .start-done-date
          .form-control[type="date"]
