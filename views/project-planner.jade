@@ -5,12 +5,17 @@ block body
   .bg-wrap.project-planner
     section
       .container
-        .row
-          .col-sm-12.text-center
-            h1 We'd love to work with you
+        .header
+          .row
+            .col-sm-12.text-center
+              h1 We'd love to work with you
+
+          .row
+            .col-sm-10.col-sm-offset-1.text-center
+              p.lead Fill out our project planner and we'll be in touch soon.
+
         .row
           .col-sm-10.col-sm-offset-1.text-center
-            p.lead Fill out our project planner and we'll be in touch soon.
 
             form#project-planner.project-planner(action="/planner", method="post")
               input(type="hidden", name="_csrf", value="")
