@@ -96,6 +96,12 @@ form#project-planner
                 background-repeat no-repeat
                 background-image url("/img/pp_services_sheet.png")
 
+            .control.active
+                span
+                    display inline-block
+                    background-color $black-alpha
+
+
         #web-design-control .control.active
             background-position 0px 0px
 
@@ -121,18 +127,21 @@ form#project-planner
             &.active
                 transform scale(1.05)
 
+        .control-label
+            vertical-align()
+
         span
             text-align center
             display block
             font-size 26px
             color white
+            padding 10px
 
-            vertical-align()
 
             transition color 50ms ease-in-out
 
             &.active
-                color $service-active-color
+                color $white
 
      .start-done-date
          .form-control[type="date"]

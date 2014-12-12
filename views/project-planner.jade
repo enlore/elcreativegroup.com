@@ -82,26 +82,30 @@ block body
                     label(for="web-design")
                       input.form-control(type="checkbox", name="web-design", value="web-design")
                       .control
-                        span  Web Design <br> and Development
+                        div.control-label
+                          span  Web Design <br> and Development
 
                   #print-design-control.form-group.col-sm-6
                     label(for="print-design")
                       input.form-control(type="checkbox", name="print-design", value="print-design")
                       .control
-                        span  Print Media Design
+                        div.control-label
+                          span  Print Media Design
 
                 .row
                   #social-media-control.form-group.col-sm-6
                     label(for="social-media")
                       input#social-media-checkbox.form-control(type="checkbox", name="social-media", value="social-media")
-                      .control(data-elcg-planner-input="#social-media-checkbox")
-                        span  Social Media Marketing
+                      .control
+                        div.control-label
+                          span  Social Media Marketing
 
                   #branding-control.form-group.col-sm-6
                     label(for="branding")
                       input#branding-checkbox.form-control(type="checkbox", name="branding", value="branding")
-                      .control(data-elcg-planner-input="#branding-checkbox")
-                        span  Branding
+                      .control
+                        div.control-label
+                          span  Branding
 
 
               fieldset.start-done-date
