@@ -7,6 +7,10 @@ var express     = require('express')
   , bodyParser  = require('body-parser')
   ;
 
+var mg = require("./email")
+
+var jade = require("jade")
+
 if (app.get("env") === "development" || app.get("env") === "debug") {
     console.debug = console.log.bind(null, "##### _ >")
 }
@@ -39,7 +43,6 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 app.get('/', function (req, res) { res.render('index') })
 app.get('/about-us', function (req, res) { res.render('about') })
-app.get('/faq', function (req, res) { res.render('faq') })
 
 app.get('/our-work', function (req, res) { res.render('our-work') })
 
@@ -50,6 +53,47 @@ app.get('/planner', function (req, res) { res.render('project-planner') })
 app.post('/planner', function (req, res) {
     console.debug("In planner post")
     console.debug(req.body)
+
+    var serviceKeys = ["web-design", "branding", "print-design", "social-media"]
+
+    var services = []
+
+    for (var i = 0; i < serviceKeys.length; i++) {
+        if (serviceKeys[i] in req.body) {
+            services.push(req.body[serviceKeys[i]])
+        }
+    }
+    console.log(services)
+
+    var templateOptions = {
+        globals: [],
+        name: req.body.human_name,
+        phone: req.body.phone,
+        email: req.body.email,
+        budget: req.body.budget,
+        description: req.body.description,
+        services: services,
+        startDate: req.body["start-date"],
+        doneDate: req.body["done-date"],
+        timestamp: new Date()
+    }
+
+    var emailData = {
+        from: "ELCG_APP@elcreativegroup.com",
+        to: "nick@elcreativegroup.com",
+        subject: "Project Planner Submissions",
+        html: jade.renderFile("views/email/planner-submission.jade", templateOptions)
+    }
+
+    mg.messages().send(emailData, function (err, resBody) {
+        if (err)
+            throw err
+
+        console.log(JSON.stringify(resBody))
+    })
+
+    console.debug(emailData.html)
+
     res.redirect("/planner")
 })
 
