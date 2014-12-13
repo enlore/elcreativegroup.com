@@ -1,14 +1,35 @@
 mixin caseStudyBlock(href, imgSrc, title, tags)
-  a.gig(href=href)
-    .row
-      .col-md-6
-        img.img-responsive(src=imgSrc)
+  if href
+    a.gig(href=href, target="_blank")
+      .row
+        .col-md-6
+          img.img-responsive(src=imgSrc)
 
-      .col-md-6
-        .copy
-          h2= title
-          p.categories= tags.join(" / ")
-          hr
-          block
+        .col-md-6
+          .copy
+            h2= title
+            p.categories= tags.join(" / ")
+            hr
+            if block
+              block
 
-      //button.reveal.btn-elcg.btn.cta Click to see more&hellip;
+            if href
+              p.hint Click to visit site
+  else
+    .gig
+      .row
+        .col-md-6
+          img.img-responsive(src=imgSrc)
+
+        .col-md-6
+          .copy
+            h2= title
+            p.categories= tags.join(" / ")
+            hr
+            if block
+              block
+
+            if href
+              p.hint Click to visit site
+
+        //button.reveal.btn-elcg.btn.cta Click to see more&hellip;

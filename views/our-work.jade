@@ -1,3 +1,4 @@
+include includes/bigButton
 include includes/caseStudyMixin
 
 extends layouts/base
@@ -5,10 +6,11 @@ block body
   .bg-wrap.our-work
     section.our-work
       .container
-        .row
-          .col-sm-12.text-center
-            h1 A Selection of Our Work
-            h2 Peruse some of our past projects
+        .header
+          .row
+            .col-sm-12.text-center
+              h1 A Selection of Our Work
+              h2 Peruse some of our past projects
 
       .container-fluid
         .current-gigs
@@ -16,27 +18,25 @@ block body
             p.
               The logo is always the first step in a total rebranding process.
 
-          +caseStudyBlock("", "/img/rrs_splash.png", "The Red River Sirens", ["Web Design"])
-            p.
-              We took their web site from zero to generating a constant stream of new recruitment.
+          +caseStudyBlock("http://clarksvillerollerderby.com", "/img/rrs_splash.png", "The Red River Sirens", ["Web Design"])
+            p We took their web site from zero to generating a constant stream of new recruits for their team.
 
-          +caseStudyBlock("", "/img/big_fish_splash.png", "Big Fish Limos", ["Web Design"])
+          +caseStudyBlock("http://bigfishlimos.com", "/img/big_fish_splash.png", "Big Fish Limos", ["Web Design"])
             p.
-              Making a great first impression is everything in the luxury business.
+              Making a great first impression is everything in the luxury limo business.
 
-          +caseStudyBlock("/", "/img/index/kw_screen.png", "The KW Report", ["Print Design", "Web Design"])
+          +caseStudyBlock("", "/img/index/kw_screen.png", "The KW Report", ["Print Design", "Web Design"])
             p.
-              We're building a high fashion media empire, one issue
-              at a time.
+              We're building a high fashion media empire, one magazine issue at a time.
 
-          +caseStudyBlock("", "/img/index/eufd_screen.png", "Eyes Up, Forks Down", ["Web Design", "Branding", "Strategy"])
+          +caseStudyBlock("http://eyesupforksdown.com", "/img/index/eufd_screen.png", "Eyes Up, Forks Down", ["Web Design", "Branding", "Strategy"])
             p.
-              We're laying the foundation for a profitable consulting business
-              for our client, Pat Woods.
+              We're laying the foundation for a profitable consulting and teaching business
+              for a certified etiquette coach.
 
           +caseStudyBlock("", "/img/index/lees_screen.png", "Lee's Salon", ["Web Design", "Marketing"])
             p.
-              Sometimes you just need a total redesign.
+              Sometimes you just need a total redesign to bring your salon's image up to a modern, beautiful standard.
 
           +caseStudyBlock("", "/img/index/kate_screen.png", "Kate Dyer for Judge", ["Web Design", "Marketing", "Strategy"])
             p.
@@ -48,12 +48,21 @@ block body
               Nothing says "charming cafe" like animations of espresso
               shots being pulled.
 
-          +caseStudyBlock("", "/img/index/tarboosh_screen.png", "Tarboosh", ["Web Design"])
+          +caseStudyBlock("http://tarbooshclarksville.com", "/img/index/tarboosh_screen.png", "Tarboosh", ["Web Design"])
             p.
               You want take out orders over the phone? A tantalizing online
               menu is how we get take out orders over the phone.
 
-          +caseStudyBlock("", "/img/index/ahlure_screen.png", "DJ Ahlure", ["Web Design"])
+          +caseStudyBlock("http://ahlure.net", "/img/index/ahlure_screen.png", "DJ Ahlure", ["Web Design"])
             p.
-              If you build it (a beautiful marketing site for your DJ
-              skills), they will call.
+              If you build it (a beautiful website to market your DJ
+              skills), they will come (to your awesome DJ parties).
+
+      .container
+        .footer
+          .row
+            .col-sm-12.text-center
+              h2 We can help you with your next project
+              p Let's get together. Fill out our project planner.
+
+              +bigButton("/planner", "Launch project planner")(class="center-block")

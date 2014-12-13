@@ -64,18 +64,8 @@ skew-it($align)
         max-width 2000px
         margin-left auto
         margin-right auto
+        margin-top 20px
         height 100%
-
-        .cta
-            font-size 18px
-            position static
-            margin-left 20px
-            margin-bottom 10px
-            @media screen and (min-width: $large)
-                position absolute
-                bottom 1em
-                left 50%
-
 
         h2
             font-size 32px
@@ -94,14 +84,20 @@ skew-it($align)
             color lighten($black, 25%)
             font-size 20px
 
-        a.gig
+        .gig
+            .hint
+                color $blue
+
             h2
                 margin-bottom 20px
+
             min-height 100%
             position relative
             margin-bottom 1.5em
+
             &:last-child
                 border-bottom none
+
             display block
             background-color $black
             color $white
@@ -194,9 +190,10 @@ skew-it($align)
 
     ol
         list-style none
-        margin-top 4em
-        margin-bottom 4em
         padding-left 0
+
+        @media (min-width: $medium)
+            margin-bottom 4em
 
     .work-step
         text-align center
