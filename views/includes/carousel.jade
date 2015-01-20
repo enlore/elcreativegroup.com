@@ -19,15 +19,20 @@ mixin carousel(id, slides)
 
     .carousel-inner(role="listbox")
       each slide, index in slides
-        var itemClass = index === 0 ? "active" : ""
+        - var itemClass = index === 0 ? "active" : ""
+
         .item(class=itemClass)
-          img(src="#{slide.src}", alt="#{slide.alt}")
+          img.slide-img(src=slide.src, alt=slide.alt)
+          //img.center-block(src="unsplash.it/300/300")
           .carousel-caption
+            h1= slide.flavor
 
     a.left.carousel-control(href="##{id}", role="button", data-slide="prev")
-      span.glyphicon.glyphicon-chevron-left(aria-hidden="True")
+      //span.glyphicon.glyphicon-chevron-left(aria-hidden="True")
+      span Left
       span.sr-only Previous
 
-    a.left.carousel-control(href="##{id}", role="button", data-slide="next")
-      span.glyphicon.glyphicon-chevron-right(aria-hidden="True")
+    a.right.carousel-control(href="##{id}", role="button", data-slide="next")
+      //span.glyphicon.glyphicon-chevron-right(aria-hidden="True")
+      span Right
       span.sr-only Next
