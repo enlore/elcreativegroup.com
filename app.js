@@ -71,7 +71,7 @@ app.post('/planner', function (req, res) {
         phone: req.body.phone,
         email: req.body.email,
         budget: req.body.budget,
-        description: req.body.description,
+        description: req.body['proj-description'],
         services: services,
         startDate: req.body["start-date"],
         doneDate: req.body["done-date"],
@@ -80,26 +80,33 @@ app.post('/planner', function (req, res) {
 
     var emailData = {
         from: "ELCG_APP@elcreativegroup.com",
-        to: "nick@elcreativegroup.com",
+        to: ["nick@elcreativegroup.com", "n.e.lorenson@gmail.com"],
         subject: "Project Planner Submissions",
         html: jade.renderFile("views/email/planner-submission.jade", templateOptions)
     }
 
     mg.messages().send(emailData, function (err, resBody) {
-        if (err)
+        if (err) {
+            res.redirect("/planner")
             throw err
+        }
 
         console.log(JSON.stringify(resBody))
+        res.redirect("/thanks")
     })
+})
 
-    console.debug(emailData.html)
-
-    res.redirect("/planner")
+app.get("/thanks", function (req, res) {
+    res.render("thanks")
 })
 
 app.post('/contact-form', function (req, res) {
     console.log(req.body)
     res.json(200, {status: 'recieved, no action', body: req.body})
+})
+
+app.get("/our-work/clarksville-roller-derby", function (req, res) {
+    res.render("rrs")
 })
 
 module.exports = app
