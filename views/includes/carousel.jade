@@ -1,0 +1,33 @@
+//
+    id,
+    slides: [
+      {
+        src: "",
+        alt: ""
+      },
+      {
+        src: "",
+        alt: ""
+      }
+    ]
+
+mixin carousel(id, slides)
+  .carousel.slide(data-ride="carousel", id=id)
+    ol.carousel-indicators
+      each slide, index in slides
+        li.active(data-target="##{id}", data-slide-to="#{index}")
+
+    .carousel-inner(role="listbox")
+      each slide, index in slides
+        var itemClass = index === 0 ? "active" : ""
+        .item(class=itemClass)
+          img(src="#{slide.src}", alt="#{slide.alt}")
+          .carousel-caption
+
+    a.left.carousel-control(href="##{id}", role="button", data-slide="prev")
+      span.glyphicon.glyphicon-chevron-left(aria-hidden="True")
+      span.sr-only Previous
+
+    a.left.carousel-control(href="##{id}", role="button", data-slide="next")
+      span.glyphicon.glyphicon-chevron-right(aria-hidden="True")
+      span.sr-only Next
