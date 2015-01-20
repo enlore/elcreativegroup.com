@@ -3,9 +3,25 @@
         //skrollr.init({forceHeight: false})
 
         /*
-         * Navbar squeeze
+         * Handy stuff to have around
          * ****************************/
         $window = $(window)
+        $body = $("body")
+
+        /*
+         * Navbar click event close
+         * ****************************/
+        $navCollapse = $("#navbar-collapse")
+
+        $body.click(function (e) {
+            console.log("BLECH!")
+            console.log(e)
+            $navCollapse.collapse('hide')
+        })
+
+        /*
+         * Navbar squeeze
+         * ****************************/
         $navbar = $('.navbar-elcg')
         $logo = $('.logo')
         $window.on('scroll', function (e) {
