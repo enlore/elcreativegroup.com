@@ -4,17 +4,9 @@ include includes/carousel
 extends layouts/base
 block body
   .bg-wrap.index(data-start="background-position: -100px -200px;", data-end="background-position: -400px -700px;")
-    .masthead
-      //h1 WE ARE WEB CRAFTSMEN
-
-      h2 WE ARE #[br] ELLIOTT &amp; LORENSON
-
-      +carousel("carousel-main", [
-        {src: "/img/carousel-img.jpg", alt: "Web Design", flavor: "WE ARE WEB CRAFTSMEN"},
-        {src: "/img/carousel-img.jpg", alt: "", flavor: "WE ARE DESIGNERS"},
-      ])
-
     header
+      //include includes/masthead
+
       .container
         .row
           .col-sm-10.col-sm-offset-1
