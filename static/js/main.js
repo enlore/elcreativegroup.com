@@ -6,17 +6,22 @@
          * Handy stuff to have around
          * ****************************/
         $window = $(window)
-        $body = $("body")
+        $bodyWrap = $(".body-wrap")
 
         /*
          * Navbar click event close
          * ****************************/
+        $navToggle = $("#nav-toggle")
+        $navToggle.on("click", function () {
+            $navCollapse.collapse('toggle')
+        })
+
+        // if window width is < 768, this is a thing
         $navCollapse = $("#navbar-collapse")
 
-        $body.click(function (e) {
-            console.log("BLECH!")
-            console.log(e)
-            $navCollapse.collapse('hide')
+        $bodyWrap.click(function (e) {
+            if ($window.width() <= 768)
+                $navCollapse.collapse('hide')
         })
 
         /*
