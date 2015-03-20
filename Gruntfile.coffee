@@ -14,6 +14,9 @@ module.exports = (grunt) ->
                     "static/css/main.css": ["styl/main.styl"]
 
         watch:
+            options:
+                livereload: true
+
             stylus:
                 files: ["styl/**/*.styl"]
                 tasks: ["stylus:compile"]
