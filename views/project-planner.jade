@@ -9,8 +9,8 @@ block body
           .col-sm-12.text-center
             h1 We'd love to work with you
         .row
-          .col-sm-10.col-sm-offset-1.text-center
-            p.lead Fill out our project planner and we'll be in touch soon.
+          .col-sm-10.col-sm-offset-1
+            p.lead.text-center Fill out our project planner and we'll be in touch soon.
 
             form#project-planner.project-planner(action="/planner", method="post")
               input(type="hidden", name="_csrf", value="")
@@ -22,15 +22,17 @@ block body
                     legend How can we contact you?
 
                 .row
-                  .form-group.col-sm-4
+                  .form-group.col-sm-8.col-sm-offset-2
                     label(for="human_name") Name
                     input.form-control(type="text", name="human_name", placeholder="Your name here.")
 
-                  .form-group.col-sm-4
+                .row
+                  .form-group.col-sm-8.col-sm-offset-2
                     label(for="email") Email
                     input.form-control(type="text", name="email", placeholder="No spam, we promise.")
 
-                  .form-group.col-sm-4
+                .row
+                  .form-group.col-sm-8.col-sm-offset-2
                     label(for="phone") Phone
                     input.form-control(type="text", name="phone", placeholder="Area code, too, please.")
 
@@ -106,7 +108,7 @@ block body
 
               fieldset.start-done-date
                 .row
-                  legend.col-sm-12 What's your ideal schedule for this project?
+                  legend.col-sm-12.text-center What's your ideal schedule for this project?
 
                 .row
                   .form-group.col-sm-6
