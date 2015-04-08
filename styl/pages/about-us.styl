@@ -1,0 +1,23 @@
+.bg-wrap.about-us
+    background-image url('/img/abstract-bg.jpg')
+    background-attachment fixed
+
+.about-us {
+    color: $white;
+
+    .portrait {
+        img {
+            box-shadow: 0 9px 0 -6px $portrait-shadow;
+        }
+
+        h4 {
+            background-color: $black;
+        }
+    }
+
+    .bio {
+        background-color: $bio-bg-fallback;
+        background-color: $bio-bg;
+        padding: 2em;
+    }
+}

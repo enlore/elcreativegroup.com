@@ -1,1 +1,9 @@
-notes
+*.css
+node_modules
+config.json
+push.sh
+
+*.swp
+*.swq
+
+.c9

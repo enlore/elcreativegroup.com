@@ -1,0 +1,306 @@
+skew-it($align)
+    .skew-me
+        position relative
+        z-index 1
+
+        h1
+            color $white
+            z-index 100
+            padding 0.5em
+            position relative
+
+        .skew-you
+            background-color $black
+            position absolute
+            width 100%
+            height 100%
+            top 0
+            z-index 10
+
+            if $align == "left"
+                @media (min-width: $large)
+                    transform(skewX(-15deg))
+                    left -20em
+
+            else if $align == "right"
+                @media (min-width: $large)
+                    transform(skewX(15deg))
+                    right -20em
+
+.welcome
+    margin-top 5em
+    background-color $welcome-bg-fallback
+    background-color $welcome-bg
+    color $welcome-fg
+    padding 2em
+
+    h1
+        margin-top 0
+        letter-spacing 3px
+        font-size 30px
+        border-bottom 1px solid $white
+        .ampersand
+            font-size 25px
+
+
+        @media (min-width $tablet)
+            width 70%
+    h2
+        font-size 56px
+    p
+        font-size 20px
+
+    .red
+        color $the-word-you
+
+.our-work
+    skew-it("right")
+
+    .container-fluid
+        padding-left 0
+        padding-right 0
+
+    .current-gigs
+        max-width 2000px
+        margin-left auto
+        margin-right auto
+        height 100%
+
+        .cta
+            font-size 18px
+            position static
+            margin-left 20px
+            margin-bottom 10px
+            @media screen and (min-width: $large)
+                position absolute
+                bottom 1em
+                left 50%
+
+
+        h2
+            font-size 32px
+
+        hr
+            border-top 1px solid lighten($black, 20%)
+
+        .copy
+            padding 1em
+
+        p
+            font-size 18px
+            color $white
+
+        p.categories
+            color lighten($black, 25%)
+            font-size 20px
+
+        a.gig
+            h2
+                margin-bottom 20px
+            min-height 100%
+            position relative
+            margin-bottom 1.5em
+            &:last-child
+                border-bottom none
+            display block
+            background-color $black
+            color $white
+
+            transition background-color 150ms ease,
+                color 150ms ease
+
+            img
+                width 100%
+
+
+            &:hover,&:active
+                //background-color $white
+
+                p.categories
+                    color lighten($black, 25%)
+
+.project-planner-cta
+    h1, h2
+        text-transform lowercase
+
+    h1
+        font-size 26px
+        @media (min-width: 500px)
+            font-size 36px
+
+        @media (min-width: 600px)
+            font-size 40px
+
+        @media (min-width: $tablet)
+            font-size 54px
+
+
+
+    .lead
+        font-size 24px
+        margin-top 20px
+
+    .wrap-wrap
+        padding 1em
+        border 2px solid $black
+
+    .wrap
+        background-color $black-alpha
+        padding 2em
+
+    .btn-elcg-lg
+        font-size 16px
+        border 2px solid $blue
+
+        @media (min-width: 400px)
+            font-size 24px
+
+        @media (min-width: $tablet)
+            font-size 36px
+
+        @media (min-width: $medium)
+            font-size 42px
+
+        span
+            background-color $btn-black
+            color $blue
+            padding 0.5em
+
+            @media (min-width: 600px)
+                padding 0.5em 2em
+
+
+        &:hover
+            span
+                color $btn-white
+
+            background-color $btn-hover-bg
+
+        &:active
+            background-color transparent
+            background-image none
+
+            span
+                color $btn-white
+                background-color $span-active-bg
+
+        span.clean
+            padding 0
+            border none
+            display inline
+
+.how-we-work
+    skew-it("left")
+
+    ol
+        list-style none
+        margin-top 4em
+        margin-bottom 4em
+        padding-left 0
+
+    .work-step
+        text-align center
+        background-color $black-alpha
+        color white
+
+        transition transform 200ms ease
+
+        &:hover
+            transform scale(1.08)
+
+        h2
+            background-color black
+            font-size 38px
+            padding 0.5em 1em
+            margin-bottom 0
+            text-transform lowercase
+
+            .ampersand
+                font-size 26px
+
+        p
+            padding 0.8em
+            min-height 120px
+            font-size 24px
+
+            font-family inherit
+
+            @media (min-width: $tablet)
+                min-height 95px
+
+.about-us
+    skew-it("left")
+
+    .bio
+        background-color rgba(0, 0, 0, 0.8)
+        padding 1em
+
+        h2
+            color $white
+
+.services
+    background-color $black
+
+    h2
+        text-align center
+        font-size 30px
+        border-bottom none
+        color white
+
+    .wrap
+        background-repeat no-repeat
+        background-position center center
+        margin-left auto
+        margin-right auto
+        margin-bottom 30px
+        line-height 30px
+        position relative
+        max-width 100%
+
+        $wrap-width = 328px
+        $wrap-height = 220px
+
+        width $wrap-width
+        height $wrap-height
+
+        @media (min-width: $tablet)
+            width $wrap-width * 1.412
+            height $wrap-height * 1.412
+
+        img
+            width $wrap-width * 0.9
+            height $wrap-height * 0.9
+            center-2d($wrap-width * 0.9, $wrap-height * 0.9)
+
+            @media (min-width: $tablet)
+                $tab-const = 1.39
+                width $wrap-width * $tab-const
+                height $wrap-height * $tab-const
+                center-2d($wrap-width * $tab-const, $wrap-height * $tab-const)
+
+
+    .wrap.web-design
+        //background-image url("/img/web_design.svg")
+        background-image url("/img/services_sheet.png")
+        background-position 0 0
+
+    .wrap.print-media
+        //background-image url("/img/print_media.svg")
+        background-image url("/img/services_sheet.png")
+        background-position -504px 0
+
+    .wrap.branding
+        //background-image url("/img/branding.svg")
+        background-image url("/img/services_sheet.png")
+        background-position 0px -343px
+
+    .wrap.social-media
+        //background-image url("/img/social_media.svg")
+        background-image url("/img/services_sheet.png")
+        background-position -504px -343px
+
+.angle-border
+    //height 71px
+    img
+        width 102%
+

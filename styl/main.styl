@@ -1,0 +1,141 @@
+$phone = 360px;
+$tablet = 768px;
+$medium = 992px;
+$large = 1200px;
+// 2200
+
+$black-alpha = rgba(0, 0, 0, 0.8);
+$nav-bg = $black-alpha;
+$welcome-bg = $black-alpha;
+$bio-bg = $black-alpha;
+$case-study-link-bg = $black-alpha;
+$services-shadow = $black-alpha;
+
+$black = #000;
+$nav-bg-fallback = $black;
+$welcome-bg-fallback = $black;
+$footer-bg = $black;
+$body-bg = $black;
+$bio-bg-fallback = $black;
+$case-study-link-bg-fallback = $black;
+$services-border = $black;
+
+$peach-skin= #F37179
+
+$red = #4CFFE3
+
+$white = #fff
+$welcome-fg = $white
+$form-fg = $white
+$p-color = $white
+$section-head-color = $white
+
+$blue = #3dfffb
+$form-focus = $blue
+$form-success = $blue
+$btn-border = $blue
+$btn-color = $blue
+$the-word-you = $blue
+$nav-hover-fg = $blue
+$anchor-color = $blue
+$budget-active-color = $blue
+$service-active-color = $blue
+
+$border-nav-connection = 119px
+
+@import 'scaffolding'
+@import 'util'
+@import 'components'
+@import 'footer'
+@import 'hexes'
+@import 'forms'
+
+// Pages
+@import 'pages/index'
+@import 'dyer'
+@import 'pages/project-planner'
+@import 'pages/our-work'
+@import 'pages/about-us'
+
+#masque.active
+    background-image url('/img/logo_nav.png')
+    background-repeat no-repeat
+    background-position center center
+    background-color $black
+    position fixed
+    top 0
+    right 0
+    left 0
+    bottom 0
+    z-index 100000
+
+
+transition($props)
+    -webkit-transition $props
+    transition $props
+
+
+body
+    position relative
+    border-top 70px solid black
+
+    transition(height 200ms ease)
+
+    @media (min-width $tablet)
+        border-top $border-nav-connection solid black
+        &.active
+            border-top $border-nav-connection - 30px solid black
+
+.bg-wrap
+    overflow hidden
+
+.bg-wrap.index
+    background-image url('/img/abstract-bg.jpg')
+    background-color $black
+    //background-size cover
+    //background-position center -235px
+    //background-repeat no-repeat
+    background-attachment fixed
+
+.logo
+    transition(height 200ms ease)
+    center-abs(127px)
+    &.active
+        height 45px
+        center-abs(61px)
+
+.navbar-elcg
+    background-color $nav-bg-fallback
+    background-color $nav-bg
+    margin-bottom 0
+
+    transition(height 200ms ease)
+
+    @media (min-width $tablet)
+        padding-bottom 1em
+        padding-top 1em
+        height $border-nav-connection
+
+        &.active
+            height $border-nav-connection - 50px
+
+            .nav > li > a
+                font-size 18px
+
+    .nav > li > a
+        engravers()
+        text-align center
+        font-size 22px
+        letter-spacing 3px
+        color $white
+        transition(font-size 200ms ease)
+        &:active, &:hover
+            background-color transparent
+            color $nav-hover-fg
+            border-bottom 1px solid $nav-hover-fg
+
+blockquote
+    padding 0 10px
+    border-left 2px solid $white
+    cite
+        font-size 22px

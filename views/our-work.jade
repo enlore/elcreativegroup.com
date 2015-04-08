@@ -1,0 +1,59 @@
+include includes/caseStudyMixin
+
+extends layouts/base
+block body
+  .bg-wrap.our-work
+    section.our-work
+      .container
+        .row
+          .col-sm-12.text-center
+            h1 A Selection of Our Work
+            h2 Peruse some of our past projects
+
+      .container-fluid
+        .current-gigs
+          +caseStudyBlock("", "/img/riverside_chiro_splash.png", "Riverside Chiropractic", ["Branding", "Print Media Design"])
+            p.
+              The logo is always the first step in a total rebranding process.
+
+          +caseStudyBlock("", "/img/rrs_splash.png", "The Red River Sirens", ["Web Design"])
+            p.
+              We took their web site from zero to generating a constant stream of new recruitment.
+
+          +caseStudyBlock("", "/img/big_fish_splash.png", "Big Fish Limos", ["Web Design"])
+            p.
+              Making a great first impression is everything in the luxury business.
+
+          +caseStudyBlock("/", "/img/index/kw_screen.jpg", "The KW Report", ["Print Design", "Web Design"])
+            p.
+              We're building a high fashion media empire, one issue
+              at a time.
+
+          +caseStudyBlock("", "/img/index/eufd_screen.png", "Eyes Up, Forks Down", ["Web Design", "Branding", "Strategy"])
+            p.
+              We're laying the foundation for a profitable consulting business
+              for our client, Pat Woods.
+
+          +caseStudyBlock("", "/img/index/lees_screen.jpg", "Lee's Salon", ["Web Design", "Marketing"])
+            p.
+              Sometimes you just need a total redesign.
+
+          +caseStudyBlock("", "/img/index/kate_screen.png", "Kate Dyer for Judge", ["Web Design", "Marketing", "Strategy"])
+            p.
+              Social media is some of the cheapest, most efficient marketing
+              out there, second only to word of mouth.
+
+          +caseStudyBlock("", "/img/index/cafedelight_screen.png", "Cafe de Light", ["Web Design"])
+            p.
+              Nothing says "charming cafe" like animations of espresso
+              shots being pulled.
+
+          +caseStudyBlock("", "/img/index/tarboosh_screen.png", "Tarboosh", ["Web Design"])
+            p.
+              You want take out orders over the phone? A tantalizing online
+              menu is how we get take out orders over the phone.
+
+          +caseStudyBlock("", "/img/index/ahlure_screen.png", "DJ Ahlure", ["Web Design"])
+            p.
+              If you build it (a beautiful marketing site for your DJ
+              skills), they will call.

@@ -1,0 +1,144 @@
+$input-bg = $black
+
+input-box-shadow($in= transparent, $out = transparent)
+    -webkit-box-shadow inset 0 1px 1px $in,
+        0 0 8px $out
+    box-shadow inset 0 1px 1px $in,
+        0 0 8px $out
+
+form
+    input.form-control
+        height 28px
+
+    fieldset
+        margin-bottom 2em
+
+        @media screen and (min-width: $tablet)
+            margin-bottom 4em
+
+    legend
+        border-bottom none
+
+    .form-control
+        background-color $input-bg
+        border-radius 0
+        border none
+        border-bottom 1px solid #666
+        font-size 16px
+        color $form-fg
+
+        &:focus
+            border-color transparent
+            border-bottom-color $form-focus
+            // no shadows on focus
+            input-box-shadow(transparent, transparent)
+
+form#project-planner
+    legend
+        font-size 26px
+
+    input[type="text"], textarea
+        line-height 36px
+        height 36px
+        font-size 18px
+
+    // Sections
+    .budget
+        .form-control[type="radio"]
+            display none
+
+        label
+            margin-left auto
+            margin-right auto
+            display block
+            padding 0.6em 0.6em
+            border 2px solid $black
+            transition transform 200ms ease
+
+        span.control
+            background-color $black
+            padding 0.5em 1em
+            min-width 100px
+            display block
+            text-align center
+            font-size 16px
+            color white
+            transition color 200ms ease
+
+        #budget-1,
+        #budget-2,
+        #budget-3,
+        #budget-4
+            label.active
+                transform scale(1.05)
+
+            .control.active
+                color $budget-active-color
+
+
+    .service-requested
+        .form-control[type="checkbox"]
+            display none
+
+        #web-design-control,
+        #print-design-control,
+        #social-media-control,
+        #branding-control
+            padding 1em
+
+            .control
+                height 120px
+                position relative
+                background-color black
+                background-position -100000px -100000px
+                background-repeat no-repeat
+                background-image url("/img/pp_services_sheet.png")
+
+        #web-design-control .control.active
+            background-position 0px 0px
+
+        #print-design-control .control.active
+            background-position -431px -122px
+
+        #social-media-control .control.active
+            background-position 0px -122px
+
+        #branding-control .control.active
+            background-position -431px 0px
+
+
+        label
+            margin-left auto
+            margin-right auto
+            display block
+            padding 1em
+            border 2px solid black
+
+            transition transform 50ms ease-in-out
+
+            &.active
+                transform scale(1.05)
+
+        span
+            text-align center
+            display block
+            font-size 26px
+            color white
+
+            vertical-align()
+
+            transition color 50ms ease-in-out
+
+            &.active
+                color $service-active-color
+
+     .start-done-date
+         .form-control[type="date"]
+            font-size 20px
+            padding 0.9em
+            display block
+
+    button#submitButton
+        margin-top 1em
+        font-size 28px !important
+

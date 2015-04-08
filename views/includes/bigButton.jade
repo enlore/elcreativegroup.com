@@ -1,0 +1,9 @@
+mixin bigButton(anchor, text)
+  if anchor
+    a(href=anchor)
+      button.btn.btn-elcg-lg(type=attributes.type || "", class=attributes.class, id=attributes.id)
+        span= text
+
+  else
+    button.btn.btn-elcg-lg(type=attributes.type || "", class=attributes.class, id=attributes.id)
+      span= text

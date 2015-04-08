@@ -1,0 +1,37 @@
+include includes/bigButton
+
+extends layouts/base
+block body
+  .bg-wrap.index(data-start="background-position: -100px -200px;", data-end="background-position: -400px -700px;")
+    header
+      .container
+        .row
+          .col-sm-10.col-sm-offset-1
+            .welcome.text-center
+              h1.center-block Elliott <span class="ampersand">&amp;</span> Lorenson
+              h2.spaced-out created with <span class="red engravers">you</span> in mind
+              p.
+                We’re Elliott and Lorenson, a design firm
+                specializing in creating custom content from the ground-up,
+                ensuring a product that is as unique as you.
+                Whether it’s a website, print media, specific marketing or an
+                entire branding campaign, our work together as a graphic
+                design/developer team with over 15 years of combined experience
+                is at your service.
+
+              p.
+                We want to make your projects stand out. We want you
+                to share it, and be proud of it. Take a look at our
+                portfolio, and let us know when you’re ready to have
+                us elevate your creative ideas to new heights.
+
+              p  Thank you for your business,
+              p Alexander &amp; Nick
+
+    include includes/our-work
+
+    include includes/project-planner-cta
+
+    include includes/how-we-work
+
+    include includes/our-services

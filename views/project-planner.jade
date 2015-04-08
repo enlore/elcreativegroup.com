@@ -1,0 +1,124 @@
+include includes/bigButton
+
+extends layouts/base
+block body
+  .bg-wrap.project-planner
+    section
+      .container
+        .row
+          .col-sm-12.text-center
+            h1 We'd love to work with you
+        .row
+          .col-sm-10.col-sm-offset-1.text-center
+            p.lead Fill out our project planner and we'll be in touch soon.
+
+            form#project-planner.project-planner(action="/planner", method="post")
+              input(type="hidden", name="_csrf", value="")
+              input(type="hidden", name="hush")
+
+              fieldset.personal-info
+                .row
+                  .col-sm-12.text-center
+                    legend How can we contact you?
+
+                .row
+                  .form-group.col-sm-4
+                    label(for="human_name") Name
+                    input.form-control(type="text", name="human_name", placeholder="Your name here.")
+
+                  .form-group.col-sm-4
+                    label(for="email") Email
+                    input.form-control(type="text", name="email", placeholder="No spam, we promise.")
+
+                  .form-group.col-sm-4
+                    label(for="phone") Phone
+                    input.form-control(type="text", name="phone", placeholder="Area code, too, please.")
+
+              fieldset.budget
+                .row
+                  .col-sm-12.text-center
+                    legend What is your budget?
+
+                .row
+                  #budget-1.form-group.col-sm-3
+                    label(for="budget")
+                      input.form-control(type="radio", name="budget", value="1k - 2.5k")
+                      span.control $1,000 to $2,500
+
+                  #budget-2.form-group.col-sm-3
+                    label(for="budget")
+                      input.form-control(type="radio", name="budget", value="2.5k to 5k")
+                      span.control $2,500 to $5,000
+
+                  #budget-3.form-group.col-sm-3
+                    label(for="budget")
+                      input.form-control(type="radio", name="budget", value="5k to 10k")
+                      span.control $5,000 to $10,000
+
+                  #budget-4.form-group.col-sm-3
+                    label(for="budget")
+                      input.form-control(type="radio", name="budget", value="10k +")
+                      span.control $10,000+
+
+              fieldset.description
+                .row
+                  .col-sm-12.text-center
+                    legend Briefly describe your project.
+
+                .row
+                  .form-group.col-sm-12
+                    label.sr-only(for="description") Description
+                    textarea.form-control(name="description",
+                    rows=4,
+                    placeholder="Let us know a few general details so we can have a better informed discussion.")
+
+              fieldset.service-requested
+                .row
+                  .col-sm-12.text-center
+                    legend What services do you need? (Check all that apply.)
+
+                .row
+                  #web-design-control.form-group.col-sm-6
+                    label(for="web-design")
+                      input.form-control(type="checkbox", name="web-design", value="web-design")
+                      .control
+                        span  Web Design <br> and Development
+
+                  #print-design-control.form-group.col-sm-6
+                    label(for="print-design")
+                      input.form-control(type="checkbox", name="print-design", value="print-design")
+                      .control
+                        span  Print Media Design
+
+                .row
+                  #social-media-control.form-group.col-sm-6
+                    label(for="social-media")
+                      input#social-media-checkbox.form-control(type="checkbox", name="social-media", value="social-media")
+                      .control(data-elcg-planner-input="#social-media-checkbox")
+                        span  Social Media Marketing
+
+                  #branding-control.form-group.col-sm-6
+                    label(for="branding")
+                      input#branding-checkbox.form-control(type="checkbox", name="branding", value="branding")
+                      .control(data-elcg-planner-input="#branding-checkbox")
+                        span  Branding
+
+
+              fieldset.start-done-date
+                .row
+                  legend.col-sm-12 What's your ideal schedule for this project?
+
+                .row
+                  .form-group.col-sm-6
+                    label(for="start-date") Ideal Start Date
+                    input.form-control(type="date", name="start-date")
+
+                  .form-group.col-sm-6
+                    label(for="done-date") Ideal Done Date
+                    input.form-control(type="date", name="done-date")
+
+              fieldset
+                .row
+                  .form-group.col-sm-12.text-center
+                    h3 All filled out?
+                    +bigButton(null, "Yes, I'm done")(id="submitButton", class="center-block", type="submit")

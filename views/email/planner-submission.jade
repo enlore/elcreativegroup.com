@@ -1,0 +1,32 @@
+html
+  head
+    style.
+      body {background-color: #eee;}
+
+  body
+    header
+      h1 Project Planner
+    section
+      h2 Personal Info
+      p.name Name: #{name}
+      p.phone Phone: #{phone}
+      p.email Email  #{email}
+
+    section
+      h2 Project Info
+      p.budget Budget: #{budget}
+      p.description Description: #{description}
+
+    section
+      h3 Requested Services
+      ul.services
+        each service in services
+          li.service= service
+
+    section
+      h2 Time Frame
+      p Start date: #{startDate}
+      p End date: #{doneDate}
+
+    footer
+      p Generated: #{timestamp}

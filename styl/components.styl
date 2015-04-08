@@ -1,0 +1,69 @@
+$btn-black = black
+$btn-white = white
+$btn-hover-bg = $red
+$span-active-bg = $red
+
+.btn-elcg-lg
+    border 2px solid $btn-black
+    padding 0.5em
+    display block
+    border-radius 0
+    background-color transparent
+    font-size 18px
+
+    @media (min-width: 600px)
+        font-size 30px
+
+    @media (min-width: $tablet)
+        font-size 36px
+
+    @media (min-width: $medium)
+        font-size 46px
+
+    a
+        text-decoration none
+
+    span
+        display block
+        border 3px solid transparent
+        background-color $btn-black
+        color $btn-white
+        padding 0.5em 2em
+
+    &:hover
+        span
+            color $btn-white
+        background-color $btn-hover-bg
+        //background-image url("/img/launch_bg.jpg")
+
+    &:active
+        background-color transparent
+        //background-image none
+
+        span
+            color $btn-white
+            background-color $span-active-bg
+            //background-image url("/img/launch_bg.jpg")
+            border 3px solid $btn-black
+
+    span.clean
+        padding 0
+        display inline
+
+.btn-elcg
+    border-left: 1px solid $btn-border;
+    border-radius: 0;
+    color: $btn-color;
+    font-size: 1.4em;
+    background-color: transparent;
+
+    &:hover
+        color: $btn-color;
+        border-left: 0;
+        border-bottom: 1px solid $btn-border;
+
+
+    &:active
+        color: #333;
+
+
